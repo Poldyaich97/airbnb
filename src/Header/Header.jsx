@@ -1,6 +1,6 @@
 import "./Header.css";
 import logo from "./logo.svg";
-import search from "./search.svg";
+
 function Header() {
   return (
     <header className="header">
@@ -16,7 +16,6 @@ function Header() {
                 name="test"
                 id="site-search"
                 placeholder="Try “Miami”"
-                // className="header__site-search"
               />
             </div>
           </div>
