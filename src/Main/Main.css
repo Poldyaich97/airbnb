@@ -8,8 +8,8 @@
 .main__title {
   font-size: 32px;
   line-height: 34px;
-  margin-bottom: 24px;
   text-align: left;
+  margin-bottom: 0;
 }
 .main__seeAll {
   text-align: right;
@@ -20,7 +20,9 @@
   color: black;
   text-decoration: none;
 }
-
+.explore__title {
+  margin-bottom: 24px;
+}
 .explore__columns {
   display: flex;
   flex-wrap: wrap;
@@ -42,50 +44,104 @@
   padding-top: 10px;
 }
 
-.experiences__title {
-  margin-bottom: 0;
-}
 .explore__columns__column img {
   width: 96px;
   height: 72px;
 }
 
-.experiences__columns {
+.columns {
   display: flex;
   column-gap: 9px;
+  overflow: hidden;
 }
-.experiences__column_img {
+
+.columns__column_img {
   margin-bottom: 8px;
 }
-.experiences__column_img img {
+.experiences_img img {
   width: 220px;
   height: 320px;
 }
-.experiences__column_price {
+.columns__column_price {
   text-align: start;
   margin-bottom: 6px;
 }
-.experiences__column_price h5 {
+.columns__column_price h5 {
   display: inline-block;
   margin: 0;
   margin-right: 4px;
   font-size: 15px;
   line-height: 18px;
 }
-.experiences__column_price span {
+.columns__column_price span {
   font-size: 15px;
   line-height: 18px;
 }
-.experiences__column_rating {
+.columns__column_rating {
   text-align: start;
 }
-.experiences__column_star {
+.columns__column_star {
   display: inline-block;
   margin-right: 8px;
 }
-.experiences__column_star img {
+.columns__column_star img {
   margin-right: 4px;
 }
-.experiences__column_star img:last-child {
+.columns__column_star img:last-child {
   margin-right: 0;
+}
+
+/*Homes*/
+.homes_img img {
+  height: 204px;
+  width: 310px;
+}
+
+.home__price span {
+  font-weight: bold;
+}
+.homes__columns {
+  column-gap: 36px;
+}
+
+/*popular*/
+.popular__columns {
+  column-gap: 36px;
+}
+.popular_img img {
+  width: 229px;
+  height: 164px;
+}
+.popular__price h5 {
+  display: block;
+  font-weight: bold;
+}
+.popular__price span {
+  font-weight: 400;
+  color: #808080;
+}
+
+/*featured*/
+.featured {
+  margin-bottom: 64px;
+}
+.featured::after {
+  content: "";
+  display: block;
+  width: 100%;
+  position: absolute;
+  border-bottom: 1px solid #808080;
+  margin-top: 64px;
+}
+.featured__title {
+  margin-bottom: 24px;
+}
+
+.featured_img img {
+  height: 220px;
+  width: 147px;
+}
+.featured__column_title {
+  margin: 0;
+  text-align: left;
 }
