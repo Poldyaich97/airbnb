@@ -106,7 +106,7 @@
 
 /*popular*/
 .popular__columns {
-  column-gap: 36px;
+  column-gap: 50px;
 }
 .popular_img img {
   width: 229px;
@@ -128,7 +128,7 @@
 .featured::after {
   content: "";
   display: block;
-  width: 100%;
+  width: 88%;
   position: absolute;
   border-bottom: 1px solid #808080;
   margin-top: 64px;
@@ -140,6 +140,9 @@
 .featured_img img {
   height: 220px;
   width: 147px;
+}
+.featured__columns {
+  column-gap: 24px;
 }
 .featured__column_title {
   margin: 0;

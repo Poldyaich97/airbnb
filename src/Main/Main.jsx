@@ -300,6 +300,48 @@ function Main() {
               </div>
               <h5 className="featured__column_title">Paris</h5>
             </div>
+            <div className="columns__column">
+              <div className="columns__column_img featured__column_img">
+                <img src={featuredOne} alt="imgOne" />
+              </div>
+              <h5 className="featured__column_title">Paris</h5>
+            </div>
+            <div className="columns__column">
+              <div className="columns__column_img featured__column_img">
+                <img src={featuredOne} alt="imgOne" />
+              </div>
+              <h5 className="featured__column_title">Paris</h5>
+            </div>
+            <div className="columns__column">
+              <div className="columns__column_img featured__column_img">
+                <img src={featuredOne} alt="imgOne" />
+              </div>
+              <h5 className="featured__column_title">Paris</h5>
+            </div>
+            <div className="columns__column">
+              <div className="columns__column_img featured__column_img">
+                <img src={featuredOne} alt="imgOne" />
+              </div>
+              <h5 className="featured__column_title">Paris</h5>
+            </div>
+            <div className="columns__column">
+              <div className="columns__column_img featured__column_img">
+                <img src={featuredOne} alt="imgOne" />
+              </div>
+              <h5 className="featured__column_title">Paris</h5>
+            </div>
+            <div className="columns__column">
+              <div className="columns__column_img featured__column_img">
+                <img src={featuredOne} alt="imgOne" />
+              </div>
+              <h5 className="featured__column_title">Paris</h5>
+            </div>
+            <div className="columns__column">
+              <div className="columns__column_img featured__column_img">
+                <img src={featuredOne} alt="imgOne" />
+              </div>
+              <h5 className="featured__column_title">Paris</h5>
+            </div>
           </div>
         </div>
       </div>

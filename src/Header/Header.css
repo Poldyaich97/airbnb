@@ -9,10 +9,10 @@
   border-bottom: 1px solid #808080;
 }
 
-.container {
+/* .container {
   width: 1350px;
   margin: auto;
-}
+} */
 .content {
   display: flex;
 }
