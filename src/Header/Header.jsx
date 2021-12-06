@@ -17,7 +17,11 @@ const Content = styled.div`
   display: flex;
 `;
 const Logo = styled.div`
-  padding: 24px 50px 24px 80px;
+  padding: 24px 50px 24px 0px;
+`;
+const StyledImg = styled.img`
+  width: 30px;
+  height: 30px;
 `;
 function Header() {
   return (
@@ -25,7 +29,7 @@ function Header() {
       <Container>
         <Content>
           <Logo>
-            <img src={logo} alt="logo" /> {/*не знаю как сделать стили img */}
+            <StyledImg src={logo} alt="logo" />
           </Logo>
           <Search />
           <Nav />

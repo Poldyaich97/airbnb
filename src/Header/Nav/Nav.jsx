@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const StyledNav = styled.nav`
-  padding: 28px 0px;
+  padding: 27px 0px 28px 189px;
   margin-left: auto;
 `;
 
