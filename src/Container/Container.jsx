@@ -1,6 +1,13 @@
 import styled from "styled-components";
 
-const styleContainer = styled.div`
-  width: 961px;
+const StyleContainer = styled.div`
+  width: 960px;
+  height: auto;
   margin: auto;
 `;
+
+function Container() {
+  return <StyleContainer></StyleContainer>;
+}
+
+export default Container;

@@ -1,20 +1,22 @@
 import "./Main.css";
-
+import styled from "styled-components";
+// import Container from "../Container/Container";
 import columnsOne from "./columnsOne.svg";
 import columnsTwo from "./columnsTwo.svg";
 import columnsThree from "./columnsThree.svg";
-import expOneImg from "./expOneImg.svg";
-import expTwoImg from "./expTwoImg.svg";
-import expThreeImg from "./expThreeImg.svg";
-import expFourImg from "./expFourImg.svg";
-import homesOne from "./homesOne.svg";
-import featuredOne from "./featuredOne.svg";
-import star from "./star.svg";
+
+const Explore = styled.div`
+  margin-bottom: 47px;
+`;
+const Container = styled.div`
+  width: 960px;
+  margin: auto;
+`;
 
 function Main() {
   return (
     <main className="main">
-      <div className="container">
+      <Container>
         <div className="explore">
           <h2 className="main__title explore__title ">Explore Airbnb</h2>
           <div className="explore__columns">
@@ -32,7 +34,7 @@ function Main() {
             </div>
           </div>
         </div>
-        <div className="experiences">
+        {/* <div className="experiences">
           <h2 className="main__title experiences__title">Experiences</h2>
           <div className="main__seeAll">
             <a href="#">See all</a>
@@ -343,8 +345,8 @@ function Main() {
               <h5 className="featured__column_title">Paris</h5>
             </div>
           </div>
-        </div>
-      </div>
+        </div> */}
+      </Container>
     </main>
   );
 }
