@@ -1,14 +1,8 @@
 import styled from "styled-components";
-import "./Header.css";
-// import Container from "../Container/Container";
+import Container from "../Container/Container";
 import Search from "./Search/Search.jsx";
 import Nav from "./Nav.jsx";
 import logo from "./logo.svg";
-
-const Container = styled.div`
-  width: 960px;
-  margin: auto;
-`;
 
 const Root = styled.header`
   box-shadow: 0px 0.5px 0px rgba(72, 72, 72, 0.3);

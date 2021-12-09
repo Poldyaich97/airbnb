@@ -1,39 +1,17 @@
 import "./Main.css";
 import styled from "styled-components";
-// import Container from "../Container/Container";
-import columnsOne from "./columnsOne.svg";
-import columnsTwo from "./columnsTwo.svg";
-import columnsThree from "./columnsThree.svg";
+import Container from "../Container/Container";
+import Explore from "./Explore/Explore";
 
-const Explore = styled.div`
+const MainExplore = styled(Explore)`
   margin-bottom: 47px;
-`;
-const Container = styled.div`
-  width: 960px;
-  margin: auto;
 `;
 
 function Main() {
   return (
     <main className="main">
       <Container>
-        <div className="explore">
-          <h2 className="main__title explore__title ">Explore Airbnb</h2>
-          <div className="explore__columns">
-            <div className="explore__columns__column">
-              <img src={columnsOne} />
-              <p className="columns__title">Homes</p>
-            </div>
-            <div className="explore__columns__column">
-              <img src={columnsTwo} />
-              <p className="columns__title">Experiences</p>
-            </div>
-            <div className="explore__columns__column">
-              <img src={columnsThree} />
-              <p className="columns__title">Restaurants</p>
-            </div>
-          </div>
-        </div>
+        <MainExplore></MainExplore>
         {/* <div className="experiences">
           <h2 className="main__title experiences__title">Experiences</h2>
           <div className="main__seeAll">

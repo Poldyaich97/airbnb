@@ -1,32 +1,65 @@
 import styled from "styled-components";
+import columnsOne from "./columnsOne.svg";
+import columnsTwo from "./columnsTwo.svg";
+import columnsThree from "./columnsThree.svg";
 
-const Container = styled.div`
-  width: 961px;
-  margin: auto;
-`;
-
-const StyleExplore = styled.div`
+const StyledExplore = styled.div`
   margin-bottom: 47px;
+`;
+const Title = styled.h2`
+  font-size: 32px;
+  line-height: 34px;
+`;
+const Columns = styled.div`
+  display: flex;
+  column-gap: 18px;
+`;
+const Column = styled.div`
+  border: 1px solid rgba(72, 72, 72, 0.2);
+  box-shadow: 0px 2px 4px rgba(72, 72, 72, 0.08);
+  border-radius: 4px;
+  display: flex;
+  width: 310px;
+`;
+const StyledImg = styled.img`
+  width: 96px;
+  height: 72px;
+  margin-right: 24px;
+`;
+const StyledRight = styled.div`
+  padding: 26px 125px 26px 0px;
+`;
+const StyledDescription = styled.p`
+  font-size: 17px;
+  line-height: 20px;
+  text-align: center;
+  margin: 0;
 `;
 
 export default function Explore() {
   return (
-    <div className="explore">
-      <h2 className="main__title explore__title ">Explore Airbnb</h2>
-      <div className="explore__columns">
-        <div className="explore__columns__column">
-          <img src={columnsOne} />
-          <p className="columns__title">Homes</p>
-        </div>
-        <div className="explore__columns__column">
-          <img src={columnsTwo} />
-          <p className="columns__title">Experiences</p>
-        </div>
-        <div className="explore__columns__column">
-          <img src={columnsThree} />
-          <p className="columns__title">Restaurants</p>
-        </div>
-      </div>
-    </div>
+    <StyledExplore>
+      <Title>Explore Airbnb</Title>
+      <Columns>
+        <Column>
+          <StyledImg src={columnsOne} />
+          <StyledRight>
+            <StyledDescription>Homes</StyledDescription>
+          </StyledRight>
+        </Column>
+        <Column>
+          <StyledImg src={columnsTwo} />
+          <StyledRight>
+            <StyledDescription>Experiences</StyledDescription>
+          </StyledRight>
+        </Column>
+        <Column>
+          <StyledImg src={columnsThree} />
+          <StyledRight>
+            <StyledDescription>Restaurants</StyledDescription>
+          </StyledRight>
+        </Column>
+      </Columns>
+    </StyledExplore>
   );
 }

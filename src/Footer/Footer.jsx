@@ -4,10 +4,12 @@ import footerLogo from "./footerLogo.svg";
 import facebook from "./facebook.svg";
 import twitter from "./twitter.svg";
 
+import Container from "../Container/Container";
+
 function Footer() {
   return (
     <footer className="footer">
-      <div className="container">
+      <Container>
         <div className="footer__content">
           <div className="footer_left">
             <select
@@ -113,7 +115,7 @@ function Footer() {
             </ul>
           </div>
         </div>
-      </div>
+      </Container>
     </footer>
   );
 }
