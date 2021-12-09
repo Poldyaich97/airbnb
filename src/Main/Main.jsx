@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Container from "../Container/Container";
 import Explore from "./Explore/Explore";
 import Experiences from "./Experiences/Experiences.jsx";
+import Popular from "./Popular/Popular";
 
 const MainExplore = styled(Explore)`
   margin-bottom: 47px;
@@ -14,6 +15,7 @@ function Main() {
       <Container>
         <MainExplore></MainExplore>
         <Experiences></Experiences>
+        <Popular></Popular>
         {/* <div className="homes">
           <h2 className="main__title">Homes</h2>
           <div className="main__seeAll">

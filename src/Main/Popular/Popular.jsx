@@ -1,9 +1,8 @@
 import styled from "styled-components";
-import expImg from "./expImg.png";
-import star from "./star.svg";
 import { StyledTitle } from "../SectionTitle/SectionTitle";
 import SeeAll from "../SectionSee/SectionSee.jsx";
-const StyledExperiences = styled.div``;
+import HomesImg from "./HomesImg.png";
+import star from "./star.svg";
 const Columns = styled.div`
   display: flex;
   column-gap: 17px;
@@ -11,13 +10,15 @@ const Columns = styled.div`
   padding: 24px 0px 64px 0px;
 `;
 const Column = styled.div``;
-const HeaderColumn = styled.div``;
+const HeaderColumn = styled.div`
+  margin-bottom: 8px;
+`;
 const StyledImage = styled.img`
-  width: 230px;
-  height: 350px;
+  width: 310px;
+  height: 204px;
 `;
 const PriceTitle = styled.div`
-  padding: 8px 6px 0px 0px;
+  font-weight: bold;
 `;
 const TittleTitle = styled.h5`
   display: inline-block;
@@ -27,6 +28,11 @@ const TittleTitle = styled.h5`
 `;
 const NameTitle = styled.span`
   font-size: 15px;
+  line-height: 18px;
+`;
+const NameSubtitle = styled.p`
+  margin: 0;
+  font-weight: 400;
   line-height: 18px;
 `;
 const FooterColumn = styled.div`
@@ -45,20 +51,21 @@ const StarImage = styled.img`
 const ReviewsLine = styled.div`
   margin: 0;
 `;
-
-export default function Experiences() {
+const StyledHomes = styled.div``;
+export default function Popular() {
   return (
-    <StyledExperiences>
-      <StyledTitle>Experiences</StyledTitle>
+    <StyledHomes>
+      <StyledTitle>Homes</StyledTitle>
       <SeeAll></SeeAll>
       <Columns>
         <Column>
           <HeaderColumn>
-            <StyledImage src={expImg} alt="imgOne" />
+            <StyledImage src={HomesImg} alt="imgOne" />
           </HeaderColumn>
           <PriceTitle>
-            <TittleTitle>$29</TittleTitle>
-            <NameTitle>Forest therapy</NameTitle>
+            <TittleTitle>$82</TittleTitle>
+            <NameTitle>La Salentina, see, nature & relax</NameTitle>
+            <NameSubtitle>Entire house · 9 beds</NameSubtitle>
           </PriceTitle>
           <FooterColumn>
             <RaitingLine>
@@ -73,11 +80,12 @@ export default function Experiences() {
         </Column>
         <Column>
           <HeaderColumn>
-            <StyledImage src={expImg} alt="imgOne" />
+            <StyledImage src={HomesImg} alt="imgOne" />
           </HeaderColumn>
           <PriceTitle>
-            <TittleTitle>$29</TittleTitle>
-            <NameTitle>Forest therapy</NameTitle>
+            <TittleTitle>$82</TittleTitle>
+            <NameTitle>La Salentina, see, nature & relax</NameTitle>
+            <NameSubtitle>Entire house · 9 beds</NameSubtitle>
           </PriceTitle>
           <FooterColumn>
             <RaitingLine>
@@ -92,11 +100,12 @@ export default function Experiences() {
         </Column>
         <Column>
           <HeaderColumn>
-            <StyledImage src={expImg} alt="imgOne" />
+            <StyledImage src={HomesImg} alt="imgOne" />
           </HeaderColumn>
           <PriceTitle>
-            <TittleTitle>$29</TittleTitle>
-            <NameTitle>Forest therapy</NameTitle>
+            <TittleTitle>$82</TittleTitle>
+            <NameTitle>La Salentina, see, nature & relax</NameTitle>
+            <NameSubtitle>Entire house · 9 beds</NameSubtitle>
           </PriceTitle>
           <FooterColumn>
             <RaitingLine>
@@ -111,11 +120,12 @@ export default function Experiences() {
         </Column>
         <Column>
           <HeaderColumn>
-            <StyledImage src={expImg} alt="imgOne" />
+            <StyledImage src={HomesImg} alt="imgOne" />
           </HeaderColumn>
           <PriceTitle>
-            <TittleTitle>$29</TittleTitle>
-            <NameTitle>Forest therapy</NameTitle>
+            <TittleTitle>$82</TittleTitle>
+            <NameTitle>La Salentina, see, nature & relax</NameTitle>
+            <NameSubtitle>Entire house · 9 beds</NameSubtitle>
           </PriceTitle>
           <FooterColumn>
             <RaitingLine>
@@ -129,6 +139,6 @@ export default function Experiences() {
           </FooterColumn>
         </Column>
       </Columns>
-    </StyledExperiences>
+    </StyledHomes>
   );
 }
