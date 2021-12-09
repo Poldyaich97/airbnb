@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { StyledTitle } from "../SectionTitle/SectionTitle";
 import columnsOne from "./columnsOne.svg";
 import columnsTwo from "./columnsTwo.svg";
 import columnsThree from "./columnsThree.svg";
@@ -6,13 +7,11 @@ import columnsThree from "./columnsThree.svg";
 const StyledExplore = styled.div`
   margin-bottom: 47px;
 `;
-const Title = styled.h2`
-  font-size: 32px;
-  line-height: 34px;
-`;
+
 const Columns = styled.div`
   display: flex;
   column-gap: 18px;
+  margin-top: 24px;
 `;
 const Column = styled.div`
   border: 1px solid rgba(72, 72, 72, 0.2);
@@ -39,7 +38,7 @@ const StyledDescription = styled.p`
 export default function Explore() {
   return (
     <StyledExplore>
-      <Title>Explore Airbnb</Title>
+      <StyledTitle>Explore Airbnb</StyledTitle>
       <Columns>
         <Column>
           <StyledImg src={columnsOne} />

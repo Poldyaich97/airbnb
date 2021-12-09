@@ -2,6 +2,7 @@ import "./Main.css";
 import styled from "styled-components";
 import Container from "../Container/Container";
 import Explore from "./Explore/Explore";
+import Experiences from "./Experiences/Experiences.jsx";
 
 const MainExplore = styled(Explore)`
   margin-bottom: 47px;
@@ -12,129 +13,8 @@ function Main() {
     <main className="main">
       <Container>
         <MainExplore></MainExplore>
-        {/* <div className="experiences">
-          <h2 className="main__title experiences__title">Experiences</h2>
-          <div className="main__seeAll">
-            <a href="#">See all</a>
-          </div>
-          <div className="columns">
-            <div className="columns__column">
-              <div className="columns__column_img experiences_img">
-                <img src={expOneImg} alt="imgOne" />
-              </div>
-              <div className="columns__column_price">
-                <h5>$29</h5>
-                <span>Forest therapy</span>
-              </div>
-              <div className="columns__column_rating">
-                <div className="columns__column_star">
-                  <img src={star} />
-                  <img src={star} />
-                  <img src={star} />
-                  <img src={star} />
-                  <img src={star} />
-                </div>
-                <span>44 reviews</span>
-              </div>
-            </div>
-            <div className="columns__column">
-              <div className="columns__column_img experiences_img">
-                <img src={expTwoImg} alt="imgOne" />
-              </div>
-              <div className="columns__column_price">
-                <h5>$29</h5>
-                <span>Forest therapy</span>
-              </div>
-              <div className="columns__column_rating">
-                <div className="columns__column_star">
-                  <img src={star} />
-                  <img src={star} />
-                  <img src={star} />
-                  <img src={star} />
-                  <img src={star} />
-                </div>
-                <span>44 reviews</span>
-              </div>
-            </div>
-            <div className="columns__column ">
-              <div className="columns__column_img experiences_img">
-                <img src={expThreeImg} alt="imgOne" />
-              </div>
-              <div className="columns__column_price experiences_img">
-                <h5>$29</h5>
-                <span>Forest therapy</span>
-              </div>
-              <div className="columns__column_rating ">
-                <div className="columns__column_star">
-                  <img src={star} />
-                  <img src={star} />
-                  <img src={star} />
-                  <img src={star} />
-                  <img src={star} />
-                </div>
-                <span>44 reviews</span>
-              </div>
-            </div>
-            <div className="columns__column ">
-              <div className="columns__column_img experiences_img">
-                <img src={expFourImg} alt="imgOne" />
-              </div>
-              <div className="columns__column_price">
-                <h5>$29</h5>
-                <span>Forest therapy</span>
-              </div>
-              <div className="columns__column_rating">
-                <div className="columns__column_star">
-                  <img src={star} />
-                  <img src={star} />
-                  <img src={star} />
-                  <img src={star} />
-                  <img src={star} />
-                </div>
-                <span>44 reviews</span>
-              </div>
-            </div>
-            <div className="columns__column ">
-              <div className="columns__column_img experiences_img">
-                <img src={expTwoImg} alt="imgOne" />
-              </div>
-              <div className="columns__column_price">
-                <h5>$29</h5>
-                <span>Forest therapy</span>
-              </div>
-              <div className="columns__column_rating">
-                <div className="columns__column_star">
-                  <img src={star} />
-                  <img src={star} />
-                  <img src={star} />
-                  <img src={star} />
-                  <img src={star} />
-                </div>
-                <span>44 reviews</span>
-              </div>
-            </div>
-            <div className="columns__column ">
-              <div className="columns__column_img experiences_img">
-                <img src={expTwoImg} alt="imgOne" />
-              </div>
-              <div className="columns__column_price">
-                <h5>$29</h5>
-                <span>Forest therapy</span>
-              </div>
-              <div className="columns__column_rating">
-                <div className="columns__column_star">
-                  <img src={star} />
-                  <img src={star} />
-                  <img src={star} />
-                  <img src={star} />
-                  <img src={star} />
-                </div>
-                <span>44 reviews</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="homes">
+        <Experiences></Experiences>
+        {/* <div className="homes">
           <h2 className="main__title">Homes</h2>
           <div className="main__seeAll">
             <a href="#">See all</a>
