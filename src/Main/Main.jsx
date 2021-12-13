@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Container from "../Container/Container";
 import Explore from "./Explore/Explore";
 import Experiences from "./Experiences/Experiences.jsx";
+import Homes from "./Homes/Homes";
 import Popular from "./Popular/Popular";
 
 const MainExplore = styled(Explore)`
@@ -15,91 +16,9 @@ function Main() {
       <Container>
         <MainExplore></MainExplore>
         <Experiences></Experiences>
+        <Homes></Homes>
         <Popular></Popular>
-        {/* <div className="homes">
-          <h2 className="main__title">Homes</h2>
-          <div className="main__seeAll">
-            <a href="#">See all</a>
-          </div>
-          <div className="columns homes__columns">
-            <div className="columns__column">
-              <div className="columns__column_img homes_img">
-                <img src={homesOne} alt="imgOne" />
-              </div>
-              <div className="columns__column_price home__price">
-                <h5>$29</h5>
-                <span>Forest therapy</span>
-              </div>
-              <div className="columns__column_rating">
-                <div className="columns__column_star">
-                  <img src={star} />
-                  <img src={star} />
-                  <img src={star} />
-                  <img src={star} />
-                  <img src={star} />
-                </div>
-                <span>44 reviews</span>
-              </div>
-            </div>
-            <div className="columns__column">
-              <div className="columns__column_img homes_img">
-                <img src={homesOne} alt="imgOne" />
-              </div>
-              <div className="columns__column_price home__price">
-                <h5>$29</h5>
-                <span>Forest therapy</span>
-              </div>
-              <div className="columns__column_rating">
-                <div className="columns__column_star">
-                  <img src={star} />
-                  <img src={star} />
-                  <img src={star} />
-                  <img src={star} />
-                  <img src={star} />
-                </div>
-                <span>44 reviews</span>
-              </div>
-            </div>
-            <div className="columns__column">
-              <div className="columns__column_img homes_img">
-                <img src={homesOne} alt="imgOne" />
-              </div>
-              <div className="columns__column_price home__price">
-                <h5>$29</h5>
-                <span>Forest therapy</span>
-              </div>
-              <div className="columns__column_rating">
-                <div className="columns__column_star">
-                  <img src={star} />
-                  <img src={star} />
-                  <img src={star} />
-                  <img src={star} />
-                  <img src={star} />
-                </div>
-                <span>44 reviews</span>
-              </div>
-            </div>
-            <div className="columns__column">
-              <div className="columns__column_img homes_img">
-                <img src={homesOne} alt="imgOne" />
-              </div>
-              <div className="columns__column_price home__price">
-                <h5>$29</h5>
-                <span>Forest therapy</span>
-              </div>
-              <div className="columns__column_rating">
-                <div className="columns__column_star">
-                  <img src={star} />
-                  <img src={star} />
-                  <img src={star} />
-                  <img src={star} />
-                  <img src={star} />
-                </div>
-                <span>44 reviews</span>
-              </div>
-            </div>
-          </div>
-        </div>
+        {/*
         <div className="popular">
           <h2 className="main__title">Popular reservations around the world</h2>
           <div className="main__seeAll">
