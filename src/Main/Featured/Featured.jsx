@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { StyledTitle } from "../SectionTitle/SectionTitle";
-import SeeAll from "../SectionSee/SectionSee.jsx";
 import featuredOne from "./Featured.png";
 const StyledFeatured = styled.div``;
 const Columns = styled.div`

@@ -3,6 +3,8 @@ import Container from "../Container/Container";
 import "../index.css";
 import "./Footer.css";
 import footerLogo from "./footerLogo.svg";
+import Twitter from "./Twitter.svg";
+import Facebook from "./Facebook.svg";
 
 const StyledFooter = styled.div``;
 const StyledContent = styled.div`
@@ -46,8 +48,45 @@ const Link = styled.a`
   font-size: 15px;
   line-height: 18px;
 `;
+const Underground = styled.div`
+  padding: 12px 0px 35px 0px;
+  display: flex;
+`;
+const StyledLogo = styled.div`
+  margin-right: 10px;
+  display: inline-block;
+`;
+const StyledImage = styled.img`
+  width: 22px;
+  height: 22px;
+  display: block;
+`;
+const StyledText = styled.div``;
+const StyledParagraph = styled.p`
+  font-size: 14px;
+  line-height: 22px;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+`;
+const StyledLeft = styled.div`
+  display: flex;
+  align-items: center;
+`;
+const StyledRight = styled.div`
+  margin-left: auto;
+  margin-right: 0;
+`;
+const StyledNavigation = styled.ul`
+  padding: 0;
+  margin: 0;
+  display: flex;
+  column-gap: 16px;
+`;
+const SocialNetwork = styled.div`
+  display: flex;
+`;
 
-cons;
 function Footer() {
   return (
     <StyledFooter>
@@ -139,25 +178,37 @@ function Footer() {
             </Column>
           </Informations>
         </StyledContent>
-        <div className="footer__links">
-          <div className="footer__links_left">
-            <img src={footerLogo} className="footer__links_logo" />
-            <span>© Airbnb Inc.</span>
-          </div>
-          <div className="footer__links_right">
-            <ul>
-              <li>
-                <a href="#">Terms</a>
-              </li>
-              <li>
-                <a href="#">Privacy</a>
-              </li>
-              <li>
-                <a href="#">Site map</a>
-              </li>
-            </ul>
-          </div>
-        </div>
+        <Underground>
+          <StyledLeft>
+            <StyledLogo>
+              <StyledImage src={footerLogo} />
+            </StyledLogo>
+            <StyledParagraph>© Airbnb Inc.</StyledParagraph>
+          </StyledLeft>
+          <StyledRight>
+            <StyledNavigation>
+              <Element>
+                <Link href="#">Terms</Link>
+              </Element>
+              <Element>
+                <Link href="#">Terms</Link>
+              </Element>
+              <Element>
+                <Link href="#">Terms</Link>
+              </Element>
+              <Element>
+                <Link href="#">
+                  <StyledImage src={Twitter} />
+                </Link>
+              </Element>
+              <Element>
+                <Link href="#">
+                  <StyledImage src={Facebook} />
+                </Link>
+              </Element>
+            </StyledNavigation>
+          </StyledRight>
+        </Underground>
       </Container>
     </StyledFooter>
   );
