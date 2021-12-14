@@ -1,4 +1,3 @@
-import "./Main.css";
 import styled from "styled-components";
 import Container from "../Container/Container";
 import Explore from "./Explore/Explore";
@@ -13,7 +12,7 @@ const MainExplore = styled(Explore)`
 
 function Main() {
   return (
-    <main className="main">
+    <main>
       <Container>
         <MainExplore></MainExplore>
         <Experiences></Experiences>

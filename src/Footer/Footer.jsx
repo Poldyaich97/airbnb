@@ -1,10 +1,8 @@
 import styled from "styled-components";
 import Container from "../Container/Container";
-import "../index.css";
-import "./Footer.css";
 import footerLogo from "./footerLogo.svg";
-import Twitter from "./Twitter.svg";
-import Facebook from "./Facebook.svg";
+import twitter from "./twitter.svg";
+import facebook from "./facebook.svg";
 
 const StyledFooter = styled.div``;
 const StyledContent = styled.div`
@@ -17,18 +15,19 @@ const StyledBurger = styled.div`
 `;
 const StyledSelect = styled.select`
   width: 228px;
-  height: 48px;
   border: 1px solid rgba(72, 72, 72, 0.2);
   border-radius: 4px;
   margin-bottom: 16px;
   display: block;
+  padding: 12px 16px;
 `;
 const Informations = styled.div`
   display: flex;
+  justify-content: space-between;
+  width: 100%;
 `;
 const Column = styled.div`
   display: inline-block;
-  margin-right: 60px;
 `;
 const Title = styled.h5`
   font-size: 15px;
@@ -51,6 +50,7 @@ const Link = styled.a`
 const Underground = styled.div`
   padding: 12px 0px 35px 0px;
   display: flex;
+  box-shadow: 0px -0.5px 0px rgba(72, 72, 72, 0.3);
 `;
 const StyledLogo = styled.div`
   margin-right: 10px;
@@ -61,7 +61,6 @@ const StyledImage = styled.img`
   height: 22px;
   display: block;
 `;
-const StyledText = styled.div``;
 const StyledParagraph = styled.p`
   font-size: 14px;
   line-height: 22px;
@@ -82,9 +81,6 @@ const StyledNavigation = styled.ul`
   margin: 0;
   display: flex;
   column-gap: 16px;
-`;
-const SocialNetwork = styled.div`
-  display: flex;
 `;
 
 function Footer() {
@@ -198,12 +194,12 @@ function Footer() {
               </Element>
               <Element>
                 <Link href="#">
-                  <StyledImage src={Twitter} />
+                  <StyledImage src={twitter} />
                 </Link>
               </Element>
               <Element>
                 <Link href="#">
-                  <StyledImage src={Facebook} />
+                  <StyledImage src={facebook} />
                 </Link>
               </Element>
             </StyledNavigation>

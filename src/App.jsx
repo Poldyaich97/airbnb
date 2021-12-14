@@ -9,7 +9,7 @@ const AppHeader = styled(Header)`
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <AppHeader />
       <Main />
       <Footer />

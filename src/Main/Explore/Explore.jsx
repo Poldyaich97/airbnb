@@ -4,9 +4,7 @@ import columnsOne from "./columnsOne.svg";
 import columnsTwo from "./columnsTwo.svg";
 import columnsThree from "./columnsThree.svg";
 
-const StyledExplore = styled.div`
-  margin-bottom: 47px;
-`;
+const StyledExplore = styled.div``;
 
 const Columns = styled.div`
   display: flex;
@@ -18,7 +16,7 @@ const Column = styled.div`
   box-shadow: 0px 2px 4px rgba(72, 72, 72, 0.08);
   border-radius: 4px;
   display: flex;
-  width: 310px;
+  flex-basis: 100%;
 `;
 const StyledImg = styled.img`
   width: 96px;
@@ -26,7 +24,8 @@ const StyledImg = styled.img`
   margin-right: 24px;
 `;
 const StyledRight = styled.div`
-  padding: 26px 125px 26px 0px;
+  display: flex;
+  align-items: center;
 `;
 const StyledDescription = styled.p`
   font-size: 17px;

@@ -15,9 +15,10 @@ const HeaderColumn = styled.div``;
 const StyledImage = styled.img`
   width: 230px;
   height: 350px;
+  mix-blend-mode: 8px;
 `;
 const PriceTitle = styled.div`
-  padding: 8px 6px 0px 0px;
+  margin-bottom: 6px;
 `;
 const TittleTitle = styled.h5`
   display: inline-block;
@@ -36,11 +37,11 @@ const RaitingLine = styled.div`
   text-align: start;
   display: flex;
   column-gap: 4px;
+  align-items: center;
 `;
 const StarImage = styled.img`
   width: 12px;
   height: 12px;
-  padding: 6px 0px;
 `;
 const ReviewsLine = styled.div`
   margin: 0;
@@ -50,69 +51,10 @@ export default function Experiences() {
   return (
     <StyledExperiences>
       <StyledTitle>Experiences</StyledTitle>
-      <SeeAll></SeeAll>
+      <SeeAll />
       <Columns>
         <Column>
-          <HeaderColumn>
-            <StyledImage src={expImg} alt="imgOne" />
-          </HeaderColumn>
-          <PriceTitle>
-            <TittleTitle>$29</TittleTitle>
-            <NameTitle>Forest therapy</NameTitle>
-          </PriceTitle>
-          <FooterColumn>
-            <RaitingLine>
-              <StarImage src={star} />
-              <StarImage src={star} />
-              <StarImage src={star} />
-              <StarImage src={star} />
-              <StarImage src={star} />
-              <ReviewsLine>44 reviews</ReviewsLine>
-            </RaitingLine>
-          </FooterColumn>
-        </Column>
-        <Column>
-          <HeaderColumn>
-            <StyledImage src={expImg} alt="imgOne" />
-          </HeaderColumn>
-          <PriceTitle>
-            <TittleTitle>$29</TittleTitle>
-            <NameTitle>Forest therapy</NameTitle>
-          </PriceTitle>
-          <FooterColumn>
-            <RaitingLine>
-              <StarImage src={star} />
-              <StarImage src={star} />
-              <StarImage src={star} />
-              <StarImage src={star} />
-              <StarImage src={star} />
-              <ReviewsLine>44 reviews</ReviewsLine>
-            </RaitingLine>
-          </FooterColumn>
-        </Column>
-        <Column>
-          <HeaderColumn>
-            <StyledImage src={expImg} alt="imgOne" />
-          </HeaderColumn>
-          <PriceTitle>
-            <TittleTitle>$29</TittleTitle>
-            <NameTitle>Forest therapy</NameTitle>
-          </PriceTitle>
-          <FooterColumn>
-            <RaitingLine>
-              <StarImage src={star} />
-              <StarImage src={star} />
-              <StarImage src={star} />
-              <StarImage src={star} />
-              <StarImage src={star} />
-              <ReviewsLine>44 reviews</ReviewsLine>
-            </RaitingLine>
-          </FooterColumn>
-        </Column>
-        <Column>
-          <HeaderColumn>
-            <StyledImage src={expImg} alt="imgOne" />
-          </HeaderColumn>
+          <StyledImage src={expImg} alt="imgOne" />
           <PriceTitle>
             <TittleTitle>$29</TittleTitle>
             <NameTitle>Forest therapy</NameTitle>
