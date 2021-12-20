@@ -2,20 +2,29 @@ import styled from "styled-components";
 import { StyledTitle } from "../SectionTitle/SectionTitle";
 import SeeAll from "../SectionSee/SectionSee.jsx";
 import HomesImg from "./HomesImg.png";
-import star from "./star.svg";
+import Raiting from "../Raiting/RatingLine";
 const Columns = styled.div`
   display: flex;
   column-gap: 17px;
   overflow: hidden;
   padding: 24px 0px 64px 0px;
 `;
+const HeaderTitle = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
 const Column = styled.div``;
 const HeaderColumn = styled.div`
   margin-bottom: 8px;
 `;
-const StyledImage = styled.img`
-  width: 310px;
+const WrapperImage = styled.div`
   height: 204px;
+`;
+const StyledImage = styled.img`
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  display: block;
 `;
 const PriceTitle = styled.div`
   font-weight: bold;
@@ -38,29 +47,20 @@ const NameSubtitle = styled.p`
 const FooterColumn = styled.div`
   text-align: start;
 `;
-const RaitingLine = styled.div`
-  text-align: start;
-  display: flex;
-  column-gap: 4px;
-`;
-const StarImage = styled.img`
-  width: 12px;
-  height: 12px;
-  padding: 6px 0px;
-`;
-const ReviewsLine = styled.div`
-  margin: 0;
-`;
 const StyledHomes = styled.div``;
 export default function Homes() {
   return (
     <StyledHomes>
-      <StyledTitle>Homes</StyledTitle>
-      <SeeAll></SeeAll>
+      <HeaderTitle>
+        <StyledTitle>Homes</StyledTitle>
+        <SeeAll />
+      </HeaderTitle>
       <Columns>
         <Column>
           <HeaderColumn>
-            <StyledImage src={HomesImg} alt="imgOne" />
+            <WrapperImage>
+              <StyledImage src={HomesImg} alt="imgOne" />
+            </WrapperImage>
           </HeaderColumn>
           <PriceTitle>
             <TittleTitle>$82</TittleTitle>
@@ -68,74 +68,7 @@ export default function Homes() {
             <NameSubtitle>Entire house · 9 beds</NameSubtitle>
           </PriceTitle>
           <FooterColumn>
-            <RaitingLine>
-              <StarImage src={star} />
-              <StarImage src={star} />
-              <StarImage src={star} />
-              <StarImage src={star} />
-              <StarImage src={star} />
-              <ReviewsLine>44 reviews</ReviewsLine>
-            </RaitingLine>
-          </FooterColumn>
-        </Column>
-        <Column>
-          <HeaderColumn>
-            <StyledImage src={HomesImg} alt="imgOne" />
-          </HeaderColumn>
-          <PriceTitle>
-            <TittleTitle>$82</TittleTitle>
-            <NameTitle>La Salentina, see, nature & relax</NameTitle>
-            <NameSubtitle>Entire house · 9 beds</NameSubtitle>
-          </PriceTitle>
-          <FooterColumn>
-            <RaitingLine>
-              <StarImage src={star} />
-              <StarImage src={star} />
-              <StarImage src={star} />
-              <StarImage src={star} />
-              <StarImage src={star} />
-              <ReviewsLine>44 reviews</ReviewsLine>
-            </RaitingLine>
-          </FooterColumn>
-        </Column>
-        <Column>
-          <HeaderColumn>
-            <StyledImage src={HomesImg} alt="imgOne" />
-          </HeaderColumn>
-          <PriceTitle>
-            <TittleTitle>$82</TittleTitle>
-            <NameTitle>La Salentina, see, nature & relax</NameTitle>
-            <NameSubtitle>Entire house · 9 beds</NameSubtitle>
-          </PriceTitle>
-          <FooterColumn>
-            <RaitingLine>
-              <StarImage src={star} />
-              <StarImage src={star} />
-              <StarImage src={star} />
-              <StarImage src={star} />
-              <StarImage src={star} />
-              <ReviewsLine>44 reviews</ReviewsLine>
-            </RaitingLine>
-          </FooterColumn>
-        </Column>
-        <Column>
-          <HeaderColumn>
-            <StyledImage src={HomesImg} alt="imgOne" />
-          </HeaderColumn>
-          <PriceTitle>
-            <TittleTitle>$82</TittleTitle>
-            <NameTitle>La Salentina, see, nature & relax</NameTitle>
-            <NameSubtitle>Entire house · 9 beds</NameSubtitle>
-          </PriceTitle>
-          <FooterColumn>
-            <RaitingLine>
-              <StarImage src={star} />
-              <StarImage src={star} />
-              <StarImage src={star} />
-              <StarImage src={star} />
-              <StarImage src={star} />
-              <ReviewsLine>44 reviews</ReviewsLine>
-            </RaitingLine>
+            <Raiting></Raiting>
           </FooterColumn>
         </Column>
       </Columns>

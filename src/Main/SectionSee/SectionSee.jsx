@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 const StyledSeeAll = styled.div`
+  display: flex;
+  align-items: flex-end;
   text-align: right;
 `;
 const StyledLink = styled.a`

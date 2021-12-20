@@ -12,9 +12,14 @@ const Column = styled.div``;
 const HeaderColumn = styled.div`
   margin-bottom: 8px;
 `;
-const StyledImage = styled.img`
-  width: 147px;
+const WrapperImage = styled.div`
   height: 220px;
+`;
+const StyledImage = styled.img`
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  display: block;
 `;
 const TittleTitle = styled.h5`
   display: inline-block;
@@ -29,37 +34,9 @@ export default function Featured() {
       <Columns>
         <Column>
           <HeaderColumn>
-            <StyledImage src={featuredOne} alt="imgOne" />
-          </HeaderColumn>
-          <TittleTitle className="featured__column_title">Paris</TittleTitle>
-        </Column>
-        <Column>
-          <HeaderColumn>
-            <StyledImage src={featuredOne} alt="imgOne" />
-          </HeaderColumn>
-          <TittleTitle className="featured__column_title">Paris</TittleTitle>
-        </Column>
-        <Column>
-          <HeaderColumn>
-            <StyledImage src={featuredOne} alt="imgOne" />
-          </HeaderColumn>
-          <TittleTitle className="featured__column_title">Paris</TittleTitle>
-        </Column>
-        <Column>
-          <HeaderColumn>
-            <StyledImage src={featuredOne} alt="imgOne" />
-          </HeaderColumn>
-          <TittleTitle className="featured__column_title">Paris</TittleTitle>
-        </Column>
-        <Column>
-          <HeaderColumn>
-            <StyledImage src={featuredOne} alt="imgOne" />
-          </HeaderColumn>
-          <TittleTitle className="featured__column_title">Paris</TittleTitle>
-        </Column>
-        <Column>
-          <HeaderColumn>
-            <StyledImage src={featuredOne} alt="imgOne" />
+            <WrapperImage>
+              <StyledImage src={featuredOne} alt="imgOne" />
+            </WrapperImage>
           </HeaderColumn>
           <TittleTitle className="featured__column_title">Paris</TittleTitle>
         </Column>

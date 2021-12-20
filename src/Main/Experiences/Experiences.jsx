@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import expImg from "./expImg.png";
-import star from "./star.svg";
 import { StyledTitle } from "../SectionTitle/SectionTitle";
 import SeeAll from "../SectionSee/SectionSee.jsx";
+import Raiting from "../Raiting/RatingLine";
 const StyledExperiences = styled.div``;
 const Columns = styled.div`
   display: flex;
@@ -10,16 +10,21 @@ const Columns = styled.div`
   overflow: hidden;
   padding: 24px 0px 29px 0px;
 `;
+const HeaderTitle = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
 const Column = styled.div``;
-const HeaderColumn = styled.div``;
-const StyledImage = styled.img`
-  width: 230px;
+const WrapperImage = styled.div`
   height: 350px;
-  mix-blend-mode: 8px;
 `;
-const PriceTitle = styled.div`
-  margin-bottom: 6px;
+const StyledImage = styled.img`
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  display: block;
 `;
+const PriceTitle = styled.div``;
 const TittleTitle = styled.h5`
   display: inline-block;
   margin: 0px 2px 0px 0px;
@@ -33,41 +38,25 @@ const NameTitle = styled.span`
 const FooterColumn = styled.div`
   text-align: start;
 `;
-const RaitingLine = styled.div`
-  text-align: start;
-  display: flex;
-  column-gap: 4px;
-  align-items: center;
-`;
-const StarImage = styled.img`
-  width: 12px;
-  height: 12px;
-`;
-const ReviewsLine = styled.div`
-  margin: 0;
-`;
 
 export default function Experiences() {
   return (
     <StyledExperiences>
-      <StyledTitle>Experiences</StyledTitle>
-      <SeeAll />
+      <HeaderTitle>
+        <StyledTitle>Experiences</StyledTitle>
+        <SeeAll />
+      </HeaderTitle>
       <Columns>
         <Column>
-          <StyledImage src={expImg} alt="imgOne" />
+          <WrapperImage>
+            <StyledImage src={expImg} alt="imgOne" />
+          </WrapperImage>
           <PriceTitle>
             <TittleTitle>$29</TittleTitle>
             <NameTitle>Forest therapy</NameTitle>
           </PriceTitle>
           <FooterColumn>
-            <RaitingLine>
-              <StarImage src={star} />
-              <StarImage src={star} />
-              <StarImage src={star} />
-              <StarImage src={star} />
-              <StarImage src={star} />
-              <ReviewsLine>44 reviews</ReviewsLine>
-            </RaitingLine>
+            <Raiting />
           </FooterColumn>
         </Column>
       </Columns>

@@ -18,10 +18,13 @@ const Column = styled.div`
   display: flex;
   flex-basis: 100%;
 `;
-const StyledImg = styled.img`
-  width: 96px;
+const WrapperImage = styled.div`
   height: 72px;
   margin-right: 24px;
+`;
+const StyledImg = styled.img`
+  height: 100%;
+  width: 100%;
 `;
 const StyledRight = styled.div`
   display: flex;
@@ -40,19 +43,27 @@ export default function Explore() {
       <StyledTitle>Explore Airbnb</StyledTitle>
       <Columns>
         <Column>
-          <StyledImg src={columnsOne} />
+          <WrapperImage>
+            <StyledImg src={columnsOne} />
+          </WrapperImage>
           <StyledRight>
             <StyledDescription>Homes</StyledDescription>
           </StyledRight>
         </Column>
         <Column>
-          <StyledImg src={columnsTwo} />
+          <WrapperImage>
+            <StyledImg src={columnsTwo} />
+          </WrapperImage>
+
           <StyledRight>
             <StyledDescription>Experiences</StyledDescription>
           </StyledRight>
         </Column>
         <Column>
-          <StyledImg src={columnsThree} />
+          <WrapperImage>
+            <StyledImg src={columnsThree} />
+          </WrapperImage>
+
           <StyledRight>
             <StyledDescription>Restaurants</StyledDescription>
           </StyledRight>

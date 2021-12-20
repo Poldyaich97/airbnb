@@ -9,22 +9,25 @@ const Columns = styled.div`
   overflow: hidden;
   padding: 24px 0px 64px 0px;
 `;
+const HeaderTitle = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
 const Column = styled.div``;
 const HeaderColumn = styled.div`
   margin-bottom: 12px;
 `;
+const WrapperImage = styled.div`
+  height: 160px;
+`;
 const StyledImage = styled.img`
-  width: 229px;
-  height: 164px;
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  display: block;
 `;
 const PriceTitle = styled.div`
   font-weight: bold;
-`;
-const TittleTitle = styled.h5`
-  display: inline-block;
-  margin: 0px 2px 0px 0px;
-  font-size: 15px;
-  line-height: 18px;
 `;
 const СountryTitle = styled.h5`
   display: block;
@@ -48,42 +51,16 @@ const NameSubtitle = styled.p`
 export default function Popular() {
   return (
     <StyledPopular>
-      <StyledTitle>Homes</StyledTitle>
-      <SeeAll></SeeAll>
+      <HeaderTitle>
+        <StyledTitle>Popular reservations around the world</StyledTitle>
+        <SeeAll />
+      </HeaderTitle>
       <Columns>
         <Column>
           <HeaderColumn>
-            <StyledImage src={PopularPictureOne} alt="imgOne" />
-          </HeaderColumn>
-          <PriceTitle>
-            <СountryTitle>Speakeasy</СountryTitle>
-            <NameTitle>Chumley’s</NameTitle>
-            <NameSubtitle>About $60 per person</NameSubtitle>
-          </PriceTitle>
-        </Column>
-        <Column>
-          <HeaderColumn>
-            <StyledImage src={PopularPictureOne} alt="imgOne" />
-          </HeaderColumn>
-          <PriceTitle>
-            <СountryTitle>Speakeasy</СountryTitle>
-            <NameTitle>Chumley’s</NameTitle>
-            <NameSubtitle>About $60 per person</NameSubtitle>
-          </PriceTitle>
-        </Column>
-        <Column>
-          <HeaderColumn>
-            <StyledImage src={PopularPictureOne} alt="imgOne" />
-          </HeaderColumn>
-          <PriceTitle>
-            <СountryTitle>Speakeasy</СountryTitle>
-            <NameTitle>Chumley’s</NameTitle>
-            <NameSubtitle>About $60 per person</NameSubtitle>
-          </PriceTitle>
-        </Column>
-        <Column>
-          <HeaderColumn>
-            <StyledImage src={PopularPictureOne} alt="imgOne" />
+            <WrapperImage>
+              <StyledImage src={PopularPictureOne} alt="imgOne" />
+            </WrapperImage>
           </HeaderColumn>
           <PriceTitle>
             <СountryTitle>Speakeasy</СountryTitle>

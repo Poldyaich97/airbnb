@@ -6,21 +6,23 @@ import Homes from "./Homes/Homes";
 import Popular from "./Popular/Popular";
 import Featured from "./Featured/Featured";
 
-const MainExplore = styled(Explore)`
-  margin-bottom: 47px;
+const StyledExplore = styled(Explore)`
+  margin-bottom: 100px;
 `;
-
+const StyledMain = styled.main`
+  padding: 48px 0px;
+`;
 function Main() {
   return (
-    <main>
+    <StyledMain>
       <Container>
-        <MainExplore></MainExplore>
-        <Experiences></Experiences>
-        <Homes></Homes>
-        <Popular></Popular>
-        <Featured></Featured>
+        <StyledExplore />
+        <Experiences />
+        <Homes />
+        <Popular />
+        <Featured />
       </Container>
-    </main>
+    </StyledMain>
   );
 }
 

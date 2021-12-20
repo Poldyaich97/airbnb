@@ -1,6 +1,8 @@
 import styled from "styled-components";
 const StyledNav = styled.nav`
   margin-left: auto;
+  display: flex;
+  column-gap: 8px;
 `;
 
 const Link = styled.a`
@@ -14,7 +16,6 @@ const Link = styled.a`
 
 const ListItem = styled.li`
   display: inline-block;
-  margin-right: 8px;
 `;
 
 function Nav() {
