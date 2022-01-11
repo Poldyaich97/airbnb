@@ -4,7 +4,9 @@ import columnsOne from "./columnsOne.svg";
 import columnsTwo from "./columnsTwo.svg";
 import columnsThree from "./columnsThree.svg";
 
-const StyledExplore = styled.div``;
+// const StyledExplore = styled.div`
+//   margin-bottom: 100px;
+// `;
 
 const Columns = styled.div`
   display: flex;
@@ -37,9 +39,9 @@ const StyledDescription = styled.p`
   margin: 0;
 `;
 
-export default function Explore() {
+export default function Explore(props) {
   return (
-    <StyledExplore>
+    <div className={props.className}>
       <StyledTitle>Explore Airbnb</StyledTitle>
       <Columns>
         <Column>
@@ -69,6 +71,6 @@ export default function Explore() {
           </StyledRight>
         </Column>
       </Columns>
-    </StyledExplore>
+    </div>
   );
 }

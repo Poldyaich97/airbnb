@@ -4,7 +4,7 @@ import Main from "./Main/Main";
 import Footer from "./Footer/Footer";
 
 const AppHeader = styled(Header)`
-  margin-bottom: 50px;
+  margin-bottom: 48px;
 `;
 
 function App() {

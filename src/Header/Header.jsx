@@ -20,9 +20,9 @@ const StyledImg = styled.img`
   height: 30px;
   display: block;
 `;
-function Header() {
+function Header(props) {
   return (
-    <Root>
+    <Root className={props.className}>
       <Container>
         <Content>
           <Logo>

@@ -7,11 +7,9 @@ import Popular from "./Popular/Popular";
 import Featured from "./Featured/Featured";
 
 const StyledExplore = styled(Explore)`
-  margin-bottom: 100px;
+  margin-bottom: 48px;
 `;
-const StyledMain = styled.main`
-  padding: 48px 0px;
-`;
+const StyledMain = styled.main``;
 function Main() {
   return (
     <StyledMain>
