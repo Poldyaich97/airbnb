@@ -9,16 +9,29 @@ import Featured from "./Featured/Featured";
 const StyledExplore = styled(Explore)`
   margin-bottom: 48px;
 `;
+const StyledExperiences = styled(Experiences)`
+  margin-bottom: 68px;
+`;
+const StyledHomes = styled(Homes)`
+  margin-bottom: 50px;
+`;
+const StyledPopular = styled(Popular)`
+  margin-bottom: 48px;
+`;
+const StyledFeatured = styled(Featured)`
+  margin-bottom: 64px;
+`;
+
 const StyledMain = styled.main``;
-function Main() {
+function Main(props) {
   return (
-    <StyledMain>
+    <StyledMain className={props.className}>
       <Container>
         <StyledExplore />
-        <Experiences />
-        <Homes />
-        <Popular />
-        <Featured />
+        <StyledExperiences />
+        <StyledHomes />
+        <StyledPopular />
+        <StyledFeatured />
       </Container>
     </StyledMain>
   );

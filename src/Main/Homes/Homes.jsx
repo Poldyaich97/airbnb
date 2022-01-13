@@ -7,11 +7,11 @@ const Columns = styled.div`
   display: flex;
   column-gap: 17px;
   overflow: hidden;
-  padding: 24px 0px 64px 0px;
 `;
 const HeaderTitle = styled.div`
   display: flex;
   justify-content: space-between;
+  margin-bottom: 24px;
 `;
 const Column = styled.div``;
 const HeaderColumn = styled.div`
@@ -48,9 +48,9 @@ const FooterColumn = styled.div`
   text-align: start;
 `;
 const StyledHomes = styled.div``;
-export default function Homes() {
+export default function Homes(props) {
   return (
-    <StyledHomes>
+    <StyledHomes className={props.className}>
       <HeaderTitle>
         <StyledTitle>Homes</StyledTitle>
         <SeeAll />

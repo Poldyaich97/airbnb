@@ -83,9 +83,9 @@ const StyledNavigation = styled.ul`
   column-gap: 16px;
 `;
 
-function Footer() {
+function Footer(props) {
   return (
-    <StyledFooter>
+    <StyledFooter className={props.className}>
       <Container>
         <StyledContent>
           <StyledBurger>

@@ -2,11 +2,15 @@ import styled from "styled-components";
 import { StyledTitle } from "../SectionTitle/SectionTitle";
 import featuredOne from "./Featured.png";
 const StyledFeatured = styled.div``;
+
+const Title = styled(StyledTitle)`
+  margin-bottom: 24px;
+`;
+
 const Columns = styled.div`
   display: flex;
   column-gap: 17px;
   overflow: hidden;
-  padding: 24px 0px 64px 0px;
 `;
 const Column = styled.div``;
 const HeaderColumn = styled.div`
@@ -27,10 +31,10 @@ const TittleTitle = styled.h5`
   font-size: 15px;
   line-height: 18px;
 `;
-export default function Featured() {
+export default function Featured(props) {
   return (
-    <StyledFeatured>
-      <StyledTitle>Featured destinations</StyledTitle>
+    <StyledFeatured className={props.className}>
+      <Title>Featured destinations</Title>
       <Columns>
         <Column>
           <HeaderColumn>

@@ -3,18 +3,22 @@ import expImg from "./expImg.png";
 import { StyledTitle } from "../SectionTitle/SectionTitle";
 import SeeAll from "../SectionSee/SectionSee.jsx";
 import Raiting from "../Raiting/RatingLine";
-const StyledExperiences = styled.div``;
+const StyledExperiences = styled.div`
+  margin-bottom: 68px;
+`;
 const Columns = styled.div`
   display: flex;
   column-gap: 17px;
   overflow: hidden;
-  padding: 24px 0px 29px 0px;
 `;
 const HeaderTitle = styled.div`
   display: flex;
   justify-content: space-between;
+  margin-bottom: 24px;
 `;
-const Column = styled.div``;
+const Column = styled.div`
+  width: 230px;
+`;
 const WrapperImage = styled.div`
   height: 350px;
 `;
@@ -39,14 +43,50 @@ const FooterColumn = styled.div`
   text-align: start;
 `;
 
-export default function Experiences() {
+export default function Experiences(props) {
   return (
-    <StyledExperiences>
+    <StyledExperiences className={props.className}>
       <HeaderTitle>
         <StyledTitle>Experiences</StyledTitle>
         <SeeAll />
       </HeaderTitle>
       <Columns>
+        <Column>
+          <WrapperImage>
+            <StyledImage src={expImg} alt="imgOne" />
+          </WrapperImage>
+          <PriceTitle>
+            <TittleTitle>$29</TittleTitle>
+            <NameTitle>Forest therapy</NameTitle>
+          </PriceTitle>
+          <FooterColumn>
+            <Raiting />
+          </FooterColumn>
+        </Column>
+        <Column>
+          <WrapperImage>
+            <StyledImage src={expImg} alt="imgOne" />
+          </WrapperImage>
+          <PriceTitle>
+            <TittleTitle>$29</TittleTitle>
+            <NameTitle>Forest therapy</NameTitle>
+          </PriceTitle>
+          <FooterColumn>
+            <Raiting />
+          </FooterColumn>
+        </Column>
+        <Column>
+          <WrapperImage>
+            <StyledImage src={expImg} alt="imgOne" />
+          </WrapperImage>
+          <PriceTitle>
+            <TittleTitle>$29</TittleTitle>
+            <NameTitle>Table Mountain Summit, Cable Car Down</NameTitle>
+          </PriceTitle>
+          <FooterColumn>
+            <Raiting />
+          </FooterColumn>
+        </Column>
         <Column>
           <WrapperImage>
             <StyledImage src={expImg} alt="imgOne" />
