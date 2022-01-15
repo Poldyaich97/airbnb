@@ -37,7 +37,7 @@ const StyledDescription = styled.p`
   line-height: 20px;
   text-align: center;
   margin: 0;
-  font-weight: 800;
+  font-weight: bold;
 `;
 
 export default function Explore(props) {

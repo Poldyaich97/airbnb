@@ -3,27 +3,20 @@ import Stub from "./Stub";
 import Header from "./Header/Header";
 import Main from "./Main/Main";
 import Footer from "./Footer/Footer";
+import React from "react";
 
 const AppHeader = styled(Header)`
   margin-bottom: 48px;
-
-  @media (max-width: 480px) {
-    display: none;
-  }
 `;
-const AppMain = styled(Main)`
-  @media (max-width: 480px) {
-    display: none;
-  }
-`;
+const AppMain = styled(Main)``;
 const AppFooter = styled(Footer)`
   margin-bottom: 48px;
-
+`;
+const Wrapper = styled.div`
   @media (max-width: 480px) {
     display: none;
   }
 `;
-const Wrapper = styled.div``;
 
 const StyledStub = styled(Stub)`
   @media (max-width: 480px) {
@@ -33,12 +26,14 @@ const StyledStub = styled(Stub)`
 
 function App() {
   return (
-    <Wrapper>
+    <React.Fragment>
       <StyledStub />
-      <AppHeader />
-      <AppMain />
-      <AppFooter />
-    </Wrapper>
+      <Wrapper>
+        <AppHeader />
+        <AppMain />
+        <AppFooter />
+      </Wrapper>
+    </React.Fragment>
   );
 }
 

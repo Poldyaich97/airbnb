@@ -6,12 +6,12 @@ const StyledNav = styled.nav`
 `;
 
 const Link = styled.a`
-  font-family: Circular Air;
   font-size: 14px;
   line-height: 24px;
   text-decoration: none;
   color: black;
   padding: 12px 0px;
+  font-weight: 400;
 `;
 
 const ListItem = styled.li`

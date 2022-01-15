@@ -19,12 +19,6 @@ const BackgroundStub = styled.div`
     z-index: -1;
   }
 `;
-// const BackgroundBlur = styled.div`
-//   /* height: 100vh;
-//   width: 480px;
-//   backdrop-filter: blur(6px);
-//   display: flex; */
-// `;
 const WrapperStub = styled.div`
   margin: 0;
   display: flex;
@@ -52,7 +46,6 @@ const SubtitleStub = styled.p`
 export default function Stub(props) {
   return (
     <BackgroundStub className={props.className}>
-      {/* <BackgroundBlur> */}
       <WrapperStub>
         <div>
           <TitleStub>Вечер в хату,господа</TitleStub>
@@ -60,7 +53,6 @@ export default function Stub(props) {
           <SubtitleStub>Мобильная версия сайта недоступна!</SubtitleStub>
         </div>
       </WrapperStub>
-      {/* </BackgroundBlur> */}
     </BackgroundStub>
   );
 }

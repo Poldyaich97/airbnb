@@ -23,7 +23,7 @@ const WrapperImage = styled.div`
   height: 350px;
 `;
 const StyledImage = styled.img`
-  object-fit: contain;
+  object-fit: cover;
   width: 100%;
   height: 100%;
   display: block;

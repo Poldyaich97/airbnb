@@ -1,6 +1,10 @@
 import styled from "styled-components";
 import star from "./star.svg";
-
+import React from "react";
+const WrapperRaiting = styled.div`
+  display: flex;
+  column-gap: 8px;
+`;
 const RaitingLine = styled.div`
   text-align: start;
   display: flex;
@@ -16,13 +20,18 @@ const ReviewsLine = styled.div`
 `;
 export default function SeeAll() {
   return (
-    <RaitingLine>
-      <StarImage src={star} />
-      <StarImage src={star} />
-      <StarImage src={star} />
-      <StarImage src={star} />
-      <StarImage src={star} />
+    // <React.Fragment>
+    <WrapperRaiting>
+      <RaitingLine>
+        <StarImage src={star} />
+        <StarImage src={star} />
+        <StarImage src={star} />
+        <StarImage src={star} />
+        <StarImage src={star} />
+      </RaitingLine>
       <ReviewsLine>44 reviews</ReviewsLine>
-    </RaitingLine>
+    </WrapperRaiting>
+
+    // </React.Fragment>
   );
 }

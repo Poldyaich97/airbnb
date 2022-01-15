@@ -1,4 +1,18 @@
-@import url(//db.onlinewebfonts.com/c/b0bc116d1147a46e14ddecc083e553b7?family=Circular+Air+Light);
+@font-face {
+  font-family: "Circular Air";
+  src: local("CircularAir"), url("./fonts/circular-air-bold.ttf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Circular Air";
+  src: local("CircularAir"), url("./fonts/circular-air-light.ttf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Circular Air";
+  src: local("CircularAir"), url("./fonts/circular-air-book.ttf");
+  font-weight: 400;
+}
 
 body {
   margin: 0;
@@ -7,10 +21,5 @@ body {
   line-height: 24px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "Circular Air Light";
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: "Circular Air";
 }
