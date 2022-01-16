@@ -21,6 +21,7 @@ const Column = styled.div`
 `;
 const WrapperImage = styled.div`
   height: 350px;
+  margin-bottom: 8px;
 `;
 const StyledImage = styled.img`
   object-fit: cover;
@@ -28,12 +29,16 @@ const StyledImage = styled.img`
   height: 100%;
   display: block;
 `;
-const PriceTitle = styled.div``;
+const PriceTitle = styled.div`
+  line-height: 1;
+  margin-bottom: 6px;
+`;
 const TittleTitle = styled.h5`
   display: inline-block;
   margin: 0px 2px 0px 0px;
   font-size: 15px;
   line-height: 18px;
+  font-weight: bold;
 `;
 const NameTitle = styled.span`
   font-size: 15px;
@@ -41,6 +46,7 @@ const NameTitle = styled.span`
 `;
 const FooterColumn = styled.div`
   text-align: start;
+  line-height: 16px;
 `;
 
 export default function Experiences(props) {
