@@ -3,6 +3,7 @@ import Container from "../Container/Container";
 import footerLogo from "./footerLogo.svg";
 import twitter from "./twitter.svg";
 import facebook from "./facebook.svg";
+import instagram from "./instagram.svg";
 
 const StyledFooter = styled.div``;
 const StyledContent = styled.div`
@@ -75,12 +76,18 @@ const StyledLeft = styled.div`
 const StyledRight = styled.div`
   margin-left: auto;
   margin-right: 0;
+  display: flex;
+  column-gap: 28px;
 `;
 const StyledNavigation = styled.ul`
   padding: 0;
   margin: 0;
   display: flex;
   column-gap: 16px;
+`;
+const StyledIcons = styled.div`
+  display: flex;
+  column-gap: 12px;
 `;
 
 function Footer(props) {
@@ -187,11 +194,13 @@ function Footer(props) {
                 <Link href="#">Terms</Link>
               </Element>
               <Element>
-                <Link href="#">Terms</Link>
+                <Link href="#">Privacy</Link>
               </Element>
               <Element>
-                <Link href="#">Terms</Link>
+                <Link href="#">Site map</Link>
               </Element>
+            </StyledNavigation>
+            <StyledIcons>
               <Element>
                 <Link href="#">
                   <StyledImage src={twitter} />
@@ -202,7 +211,12 @@ function Footer(props) {
                   <StyledImage src={facebook} />
                 </Link>
               </Element>
-            </StyledNavigation>
+              <Element>
+                <Link href="#">
+                  <StyledImage src={instagram} />
+                </Link>
+              </Element>
+            </StyledIcons>
           </StyledRight>
         </Underground>
       </Container>
