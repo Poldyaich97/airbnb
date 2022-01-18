@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import { StyledTitle } from "../SectionTitle/SectionTitle";
-import columnsOne from "./columnsOne.svg";
-import columnsTwo from "./columnsTwo.svg";
-import columnsThree from "./columnsThree.svg";
+import experiencesOne from "./explore_1.jpg";
+import experiencesTwo from "./explore_2.jpg";
+import experiencesThree from "./explore_3.jpg";
 
 const Title = styled(StyledTitle)`
   margin-bottom: 24px;
@@ -47,7 +47,7 @@ export default function Explore(props) {
       <Columns>
         <Column>
           <WrapperImage>
-            <StyledImg src={columnsOne} />
+            <StyledImg src={experiencesOne} />
           </WrapperImage>
           <StyledRight>
             <StyledDescription>Homes</StyledDescription>
@@ -55,7 +55,7 @@ export default function Explore(props) {
         </Column>
         <Column>
           <WrapperImage>
-            <StyledImg src={columnsTwo} />
+            <StyledImg src={experiencesTwo} />
           </WrapperImage>
 
           <StyledRight>
@@ -64,7 +64,7 @@ export default function Explore(props) {
         </Column>
         <Column>
           <WrapperImage>
-            <StyledImg src={columnsThree} />
+            <StyledImg src={experiencesThree} />
           </WrapperImage>
 
           <StyledRight>

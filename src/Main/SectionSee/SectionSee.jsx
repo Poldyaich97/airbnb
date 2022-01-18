@@ -9,7 +9,7 @@ const StyledLink = styled.a`
   text-decoration: none;
   position: relative;
   color: #383838;
-  padding-right: 10px;
+  padding-right: 16px;
   font-size: 14px;
   line-height: 24px;
 
@@ -17,7 +17,7 @@ const StyledLink = styled.a`
     content: url(${Arrow});
     position: absolute;
     top: 0px;
-    left: 45px;
+    right: 0;
     z-index: 12;
   }
 `;

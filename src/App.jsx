@@ -8,7 +8,7 @@ import React from "react";
 const AppHeader = styled(Header)`
   margin-bottom: 48px;
 `;
-const AppMain = styled(Main)``;
+
 const AppFooter = styled(Footer)`
   margin-bottom: 48px;
 `;
@@ -19,8 +19,8 @@ const Wrapper = styled.div`
 `;
 
 const StyledStub = styled(Stub)`
-  @media (max-width: 480px) {
-    display: flex;
+  @media (min-width: 480px) {
+    display: none;
   } ;
 `;
 
@@ -30,7 +30,7 @@ function App() {
       <StyledStub />
       <Wrapper>
         <AppHeader />
-        <AppMain />
+        <Main />
         <AppFooter />
       </Wrapper>
     </React.Fragment>

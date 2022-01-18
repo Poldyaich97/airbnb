@@ -5,20 +5,23 @@ import twitter from "./twitter.svg";
 import facebook from "./facebook.svg";
 import instagram from "./instagram.svg";
 
-const StyledFooter = styled.div``;
 const StyledContent = styled.div`
   display: flex;
   padding: 48px 0px;
   box-shadow: 0px -0.5px 0px rgba(72, 72, 72, 0.3);
+  column-gap: 100px;
 `;
 const StyledBurger = styled.div`
-  margin-right: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  row-gap: 16px;
 `;
 const StyledSelect = styled.select`
   width: 228px;
   border: 1px solid rgba(72, 72, 72, 0.2);
   border-radius: 4px;
-  margin-bottom: 16px;
+  /* margin-bottom: 16px; */
   display: block;
   padding: 12px 16px;
 `;
@@ -92,7 +95,7 @@ const StyledIcons = styled.div`
 
 function Footer(props) {
   return (
-    <StyledFooter className={props.className}>
+    <div className={props.className}>
       <Container>
         <StyledContent>
           <StyledBurger>
@@ -220,7 +223,7 @@ function Footer(props) {
           </StyledRight>
         </Underground>
       </Container>
-    </StyledFooter>
+    </div>
   );
 }
 

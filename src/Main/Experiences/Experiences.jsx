@@ -43,6 +43,7 @@ const TittleTitle = styled.h5`
 const NameTitle = styled.span`
   font-size: 15px;
   line-height: 18px;
+  font-weight: 300;
 `;
 const FooterColumn = styled.div`
   text-align: start;

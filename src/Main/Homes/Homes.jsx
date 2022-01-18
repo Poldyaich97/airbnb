@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { StyledTitle } from "../SectionTitle/SectionTitle";
 import SeeAll from "../SectionSee/SectionSee.jsx";
 import HomesImg from "./HomesImg.png";
-import Raiting from "../Raiting/RatingLine";
+import Raiting from "../RaitingSuperhost/RatingSuperhost";
 const Columns = styled.div`
   display: flex;
   column-gap: 17px;

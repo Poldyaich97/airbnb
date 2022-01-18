@@ -8,7 +8,7 @@ const BackgroundStub = styled.div`
   background-size: cover;
   background-position: center center;
   backdrop-filter: blur(5px);
-  display: none;
+  display: flex;
   position: relative;
   &::before {
     content: "";
@@ -32,14 +32,14 @@ const TitleStub = styled.h1`
   font-weight: 600;
   color: #f5f5f5;
   text-align: center;
-  font-family: "Circular Air Light";
+  font-family: "Circular Air";
   z-index: 3;
 `;
 const SubtitleStub = styled.p`
   font-size: 24px;
   font-weight: 600;
   color: #f5f5f5;
-  font-family: "Circular Air Light";
+  font-family: "Circular Air";
   text-align: center;
 `;
 

@@ -1,16 +1,16 @@
 @font-face {
   font-family: "Circular Air";
-  src: local("CircularAir"), url("./fonts/circular-air-bold.ttf");
+  src: local("CircularAir"), url("//fonts/circular-air-bold.ttf");
   font-weight: bold;
 }
 @font-face {
   font-family: "Circular Air";
-  src: local("CircularAir"), url("./fonts/circular-air-light.ttf");
+  src: local("CircularAir"), url("//fonts/circular-air-light.ttf");
   font-weight: 300;
 }
 @font-face {
   font-family: "Circular Air";
-  src: local("CircularAir"), url("./fonts/circular-air-book.ttf");
+  src: local("CircularAir"), url("//fonts/circular-air-book.ttf");
   font-weight: 400;
 }
 
