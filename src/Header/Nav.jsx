@@ -6,11 +6,11 @@ const StyledNav = styled.nav`
 `;
 
 const Link = styled.a`
-  font-size: 14px;
   line-height: 24px;
   text-decoration: none;
   color: black;
   padding: 12px 0px;
+  font-size: 14px;
   font-weight: 400;
 `;
 

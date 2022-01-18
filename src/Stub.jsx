@@ -4,19 +4,19 @@ import bgStub from "./bgStub.jpg";
 const BackgroundStub = styled.div`
   height: 100vh;
   width: 100vw;
-  background-image: url(${bgStub});
-  background-size: cover;
-  background-position: center center;
-  backdrop-filter: blur(5px);
   display: flex;
   position: relative;
+  z-index: 0;
   &::before {
     content: "";
-    backdrop-filter: blur(6px);
-    position: absolute;
-    height: 100vh;
-    width: 100vw;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
     z-index: -1;
+    background: url(${bgStub}) center / cover no-repeat;
+    filter: blur(5px);
   }
 `;
 const WrapperStub = styled.div`
@@ -32,14 +32,11 @@ const TitleStub = styled.h1`
   font-weight: 600;
   color: #f5f5f5;
   text-align: center;
-  font-family: "Circular Air";
-  z-index: 3;
 `;
 const SubtitleStub = styled.p`
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 300;
   color: #f5f5f5;
-  font-family: "Circular Air";
   text-align: center;
 `;
 
