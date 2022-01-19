@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Container from "../Container/Container";
-import footerLogo from "./footerLogo.svg";
+import blackWhiteLogo from "./footerLogo.svg";
 import twitter from "./twitter.svg";
 import facebook from "./facebook.svg";
 import instagram from "./instagram.svg";
@@ -21,7 +21,6 @@ const StyledSelect = styled.select`
   width: 228px;
   border: 1px solid rgba(72, 72, 72, 0.2);
   border-radius: 4px;
-  /* margin-bottom: 16px; */
   display: block;
   padding: 12px 16px;
 `;
@@ -61,15 +60,12 @@ const StyledLogo = styled.div`
   display: inline-block;
 `;
 const StyledImage = styled.img`
-  width: 22px;
-  height: 22px;
   display: block;
 `;
 const StyledParagraph = styled.p`
   font-size: 14px;
   line-height: 22px;
   margin: 0;
-  padding: 0;
   display: inline-block;
 `;
 const StyledLeft = styled.div`
@@ -78,7 +74,6 @@ const StyledLeft = styled.div`
 `;
 const StyledRight = styled.div`
   margin-left: auto;
-  margin-right: 0;
   display: flex;
   column-gap: 28px;
 `;
@@ -187,7 +182,7 @@ function Footer(props) {
         <Underground>
           <StyledLeft>
             <StyledLogo>
-              <StyledImage src={footerLogo} />
+              <StyledImage src={blackWhiteLogo} />
             </StyledLogo>
             <StyledParagraph>© Airbnb Inc.</StyledParagraph>
           </StyledLeft>
