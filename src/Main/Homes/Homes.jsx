@@ -5,15 +5,16 @@ import HomesImg from "./HomesImg.png";
 import Raiting from "../RaitingSuperhost/RatingSuperhost";
 const Columns = styled.div`
   display: flex;
-  column-gap: 17px;
-  overflow: hidden;
+  column-gap: 18px;
 `;
 const HeaderTitle = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 24px;
+  display: flex;
+  align-items: center;
 `;
-const Column = styled.div``;
+
 const HeaderColumn = styled.div`
   margin-bottom: 8px;
 `;
@@ -29,7 +30,7 @@ const StyledImage = styled.img`
 const PriceTitle = styled.div`
   font-weight: bold;
 `;
-const TittleTitle = styled.h5`
+const SubTitle = styled.h5`
   display: inline-block;
   margin: 0px 2px 0px 0px;
   font-size: 15px;
@@ -56,21 +57,21 @@ export default function Homes(props) {
         <SeeAll />
       </HeaderTitle>
       <Columns>
-        <Column>
+        <div>
           <HeaderColumn>
             <WrapperImage>
               <StyledImage src={HomesImg} alt="imgOne" />
             </WrapperImage>
           </HeaderColumn>
           <PriceTitle>
-            <TittleTitle>$82</TittleTitle>
+            <SubTitle>$82</SubTitle>
             <NameTitle>La Salentina, see, nature & relax</NameTitle>
             <NameSubtitle>Entire house · 9 beds</NameSubtitle>
           </PriceTitle>
           <FooterColumn>
             <Raiting></Raiting>
           </FooterColumn>
-        </Column>
+        </div>
       </Columns>
     </StyledHomes>
   );

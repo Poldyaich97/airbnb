@@ -15,12 +15,9 @@ const StarImage = styled.img`
   width: 12px;
   height: 12px;
 `;
-const ReviewsLine = styled.div`
-  margin: 0;
-`;
-export default function SeeAll() {
+
+export default function RatingLine() {
   return (
-    // <React.Fragment>
     <WrapperRaiting>
       <RaitingLine>
         <StarImage src={star} />
@@ -29,9 +26,7 @@ export default function SeeAll() {
         <StarImage src={star} />
         <StarImage src={star} />
       </RaitingLine>
-      <ReviewsLine>44 reviews</ReviewsLine>
+      <div>44 reviews</div>
     </WrapperRaiting>
-
-    // </React.Fragment>
   );
 }

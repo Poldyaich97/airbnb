@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Container from "../Container/Container";
-import blackWhiteLogo from "./footerLogo.svg";
+import blackWhiteLogo from "./blackWhiteLogo.svg";
 import twitter from "./twitter.svg";
 import facebook from "./facebook.svg";
 import instagram from "./instagram.svg";

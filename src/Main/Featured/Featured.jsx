@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { StyledTitle } from "../SectionTitle/SectionTitle";
-import featuredOne from "./Featured.png";
-const StyledFeatured = styled.div``;
+import featured from "./Featured.png";
 
 const Title = styled(StyledTitle)`
   margin-bottom: 24px;
@@ -9,8 +8,7 @@ const Title = styled(StyledTitle)`
 
 const Columns = styled.div`
   display: flex;
-  column-gap: 17px;
-  overflow: hidden;
+  column-gap: 18px;
 `;
 const Column = styled.div``;
 const HeaderColumn = styled.div`
@@ -33,18 +31,18 @@ const TittleTitle = styled.h5`
 `;
 export default function Featured(props) {
   return (
-    <StyledFeatured className={props.className}>
+    <div className={props.className}>
       <Title>Featured destinations</Title>
       <Columns>
         <Column>
           <HeaderColumn>
             <WrapperImage>
-              <StyledImage src={featuredOne} alt="imgOne" />
+              <StyledImage src={featured} alt="imgOne" />
             </WrapperImage>
           </HeaderColumn>
           <TittleTitle className="featured__column_title">Paris</TittleTitle>
         </Column>
       </Columns>
-    </StyledFeatured>
+    </div>
   );
 }

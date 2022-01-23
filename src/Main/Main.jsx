@@ -6,34 +6,25 @@ import Homes from "./Homes/Homes";
 import Popular from "./Popular/Popular";
 import Featured from "./Featured/Featured";
 
-const StyledExplore = styled(Explore)`
-  margin-bottom: 48px;
-`;
-const StyledExperiences = styled(Experiences)`
-  margin-bottom: 68px;
-`;
-const StyledHomes = styled(Homes)`
-  margin-bottom: 50px;
-`;
-const StyledPopular = styled(Popular)`
-  margin-bottom: 48px;
-`;
-const StyledFeatured = styled(Featured)`
-  margin-bottom: 64px;
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  row-gap: 48px;
 `;
 
-const StyledMain = styled.main``;
 function Main(props) {
   return (
-    <StyledMain className={props.className}>
+    <div className={props.className}>
       <Container>
-        <StyledExplore />
-        <StyledExperiences />
-        <StyledHomes />
-        <StyledPopular />
-        <StyledFeatured />
+        <Wrapper>
+          <Explore />
+          <Experiences />
+          <Homes />
+          <Popular />
+          <Featured />
+        </Wrapper>
       </Container>
-    </StyledMain>
+    </div>
   );
 }
 

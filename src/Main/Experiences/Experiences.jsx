@@ -1,20 +1,21 @@
 import styled from "styled-components";
 import expImg from "./expImg.png";
 import { StyledTitle } from "../SectionTitle/SectionTitle";
-import SeeAll from "../SectionSee/SectionSee.jsx";
+import SectionSee from "../SectionSee/SectionSee.jsx";
 import Raiting from "../Raiting/RatingLine";
 const StyledExperiences = styled.div`
   margin-bottom: 68px;
 `;
 const Columns = styled.div`
   display: flex;
-  column-gap: 17px;
-  overflow: hidden;
+  column-gap: 18px;
 `;
 const HeaderTitle = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 24px;
+  display: flex;
+  align-items: center;
 `;
 const Column = styled.div`
   width: 230px;
@@ -54,7 +55,7 @@ export default function Experiences(props) {
     <StyledExperiences className={props.className}>
       <HeaderTitle>
         <StyledTitle>Experiences</StyledTitle>
-        <SeeAll />
+        <SectionSee />
       </HeaderTitle>
       <Columns>
         <Column>

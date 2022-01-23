@@ -6,7 +6,6 @@ const WrapperRaiting = styled.div`
   column-gap: 8px;
 `;
 const RaitingLine = styled.div`
-  text-align: start;
   display: flex;
   column-gap: 4px;
   align-items: center;
@@ -21,9 +20,8 @@ const ReviewsLine = styled.p`
   font-size: 12px;
   line-height: 16px;
 `;
-export default function SeeAll() {
+export default function RatingSuperhost() {
   return (
-    // <React.Fragment>
     <WrapperRaiting>
       <RaitingLine>
         <StarImage src={star} />
@@ -34,7 +32,5 @@ export default function SeeAll() {
       </RaitingLine>
       <ReviewsLine>97 · Superhost</ReviewsLine>
     </WrapperRaiting>
-
-    // </React.Fragment>
   );
 }

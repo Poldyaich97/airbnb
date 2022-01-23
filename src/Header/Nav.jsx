@@ -1,6 +1,5 @@
 import styled from "styled-components";
-const StyledNav = styled.nav`
-  margin-left: auto;
+const NavWrapper = styled.nav`
   display: flex;
   column-gap: 8px;
 `;
@@ -8,19 +7,18 @@ const StyledNav = styled.nav`
 const Link = styled.a`
   line-height: 24px;
   text-decoration: none;
-  color: black;
+  color: #383838;
   padding: 12px 0px;
   font-size: 14px;
-  font-weight: 400;
 `;
 
 const ListItem = styled.li`
-  display: inline-block;
+  display: block;
 `;
 
-function Nav() {
+function Nav(props) {
   return (
-    <StyledNav>
+    <NavWrapper className={props.className}>
       <ListItem>
         <Link href="#">Become a host</Link>
       </ListItem>
@@ -33,7 +31,7 @@ function Nav() {
       <ListItem>
         <Link href="#">Log In</Link>
       </ListItem>
-    </StyledNav>
+    </NavWrapper>
   );
 }
 

@@ -32,7 +32,7 @@ const StyledRight = styled.div`
   display: flex;
   align-items: center;
 `;
-const StyledDescription = styled.p`
+const Description = styled.p`
   font-size: 17px;
   line-height: 20px;
   text-align: center;
@@ -50,7 +50,7 @@ export default function Explore(props) {
             <StyledImg src={experiencesOne} />
           </WrapperImage>
           <StyledRight>
-            <StyledDescription>Homes</StyledDescription>
+            <Description>Homes</Description>
           </StyledRight>
         </Column>
         <Column>
@@ -59,7 +59,7 @@ export default function Explore(props) {
           </WrapperImage>
 
           <StyledRight>
-            <StyledDescription>Experiences</StyledDescription>
+            <Description>Experiences</Description>
           </StyledRight>
         </Column>
         <Column>
@@ -68,7 +68,7 @@ export default function Explore(props) {
           </WrapperImage>
 
           <StyledRight>
-            <StyledDescription>Restaurants</StyledDescription>
+            <Description>Restaurants</Description>
           </StyledRight>
         </Column>
       </Columns>

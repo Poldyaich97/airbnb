@@ -12,6 +12,9 @@ const Content = styled.div`
   display: flex;
   align-items: center;
 `;
+const StyledNav = styled(Nav)`
+  margin-left: auto;
+`;
 const Logo = styled.div`
   margin-right: 50px;
 `;
@@ -29,7 +32,7 @@ function Header(props) {
             <StyledImg src={logo} alt="logo" />
           </Logo>
           <Search />
-          <Nav />
+          <StyledNav />
         </Content>
       </Container>
     </Root>

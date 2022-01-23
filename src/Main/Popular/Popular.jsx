@@ -12,8 +12,9 @@ const Columns = styled.div`
 const HeaderTitle = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
 `;
-const Column = styled.div``;
+
 const HeaderColumn = styled.div`
   margin-bottom: 12px;
 `;
@@ -31,9 +32,10 @@ const PriceTitle = styled.div`
 `;
 const СountryTitle = styled.h5`
   display: block;
-  font-size: 12px;
+  font-size: 10px;
   line-height: 12px;
   margin: 0px;
+  text-transform: uppercase;
 `;
 const NameTitle = styled.span`
   font-size: 18px;
@@ -46,7 +48,7 @@ const NameSubtitle = styled.p`
   margin: 0;
   font-size: 18px;
   line-height: 21px;
-  font-weight: 400;
+  font-weight: 300;
 `;
 export default function Popular() {
   return (
@@ -56,7 +58,7 @@ export default function Popular() {
         <SeeAll />
       </HeaderTitle>
       <Columns>
-        <Column>
+        <div>
           <HeaderColumn>
             <WrapperImage>
               <StyledImage src={PopularPictureOne} alt="imgOne" />
@@ -67,7 +69,7 @@ export default function Popular() {
             <NameTitle>Chumley’s</NameTitle>
             <NameSubtitle>About $60 per person</NameSubtitle>
           </PriceTitle>
-        </Column>
+        </div>
       </Columns>
     </StyledPopular>
   );
