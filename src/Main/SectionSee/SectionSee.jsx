@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Arrow from "./arrow.svg";
+
 const StyledSeeAll = styled.div`
   display: flex;
   align-items: center;
@@ -18,13 +19,13 @@ const StyledLink = styled.a`
     position: absolute;
     top: 0px;
     right: 0;
-    z-index: 12;
+    z-index: 1;
   }
 `;
 export default function SeeAll() {
   return (
-    <StyledSeeAll>
-      <StyledLink href="#">See all</StyledLink>
-    </StyledSeeAll>
+    // <StyledSeeAll>
+    <StyledLink href="#">See all</StyledLink>
+    // </StyledSeeAll>
   );
 }
