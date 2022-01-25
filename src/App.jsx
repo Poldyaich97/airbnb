@@ -5,6 +5,8 @@ import Main from "./Main/Main";
 import Footer from "./Footer/Footer";
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
+import { Route, Routes, Link } from "react-router-dom";
+import Help from "./help";
 
 const AppHeader = styled(Header)`
   margin-bottom: 48px;
@@ -32,6 +34,9 @@ function App() {
         <StyledStub />
         <Wrapper>
           <AppHeader />
+          <Routes>
+            <Route path="/help" element={<Help />} />
+          </Routes>
           <Main />
           <AppFooter />
         </Wrapper>

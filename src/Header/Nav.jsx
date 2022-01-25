@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { Route, Routes, Link } from "react-router-dom";
-import Help from "../help.jsx";
 const NavWrapper = styled.nav`
   display: flex;
   column-gap: 8px;
@@ -25,7 +24,7 @@ function Nav(props) {
         <Linki href="#">Become a host</Linki>
       </ListItem>
       <ListItem>
-        <Linki href="#">Help</Linki>
+        <Link to="/help">Help</Link>
       </ListItem>
       <ListItem>
         <Linki href="#">Sign Up</Linki>
@@ -33,7 +32,6 @@ function Nav(props) {
       <ListItem>
         <Linki href="#">Log In</Linki>
       </ListItem>
-      <Route path="/help" element={<Help />} />
     </NavWrapper>
   );
 }

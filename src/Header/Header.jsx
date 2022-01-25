@@ -3,6 +3,7 @@ import Container from "../Container/Container";
 import Search from "./Search/Search.jsx";
 import Nav from "./Nav.jsx";
 import logo from "./logo.svg";
+import { Route, Routes, Link } from "react-router-dom";
 
 const Root = styled.header`
   box-shadow: 0px 0.5px 0px rgba(72, 72, 72, 0.3);
@@ -29,7 +30,9 @@ function Header(props) {
       <Container>
         <Content>
           <Logo>
-            <StyledImg src={logo} alt="logo" />
+            <Link to="/#">
+              <StyledImg src={logo} alt="logo" />
+            </Link>
           </Logo>
           <Search />
           <StyledNav />
