@@ -4,6 +4,7 @@ import Header from "./Header/Header";
 import Main from "./Main/Main";
 import Footer from "./Footer/Footer";
 import React from "react";
+import { BrowserRouter } from "react-router-dom";
 
 const AppHeader = styled(Header)`
   margin-bottom: 48px;
@@ -26,14 +27,16 @@ const StyledStub = styled(Stub)`
 
 function App() {
   return (
-    <React.Fragment>
-      <StyledStub />
-      <Wrapper>
-        <AppHeader />
-        <Main />
-        <AppFooter />
-      </Wrapper>
-    </React.Fragment>
+    <BrowserRouter>
+      <React.Fragment>
+        <StyledStub />
+        <Wrapper>
+          <AppHeader />
+          <Main />
+          <AppFooter />
+        </Wrapper>
+      </React.Fragment>
+    </BrowserRouter>
   );
 }
 

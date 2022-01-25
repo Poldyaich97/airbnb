@@ -1,10 +1,12 @@
 import styled from "styled-components";
+import { Route, Routes, Link } from "react-router-dom";
+import Help from "../help.jsx";
 const NavWrapper = styled.nav`
   display: flex;
   column-gap: 8px;
 `;
 
-const Link = styled.a`
+const Linki = styled.a`
   line-height: 24px;
   text-decoration: none;
   color: #383838;
@@ -20,17 +22,18 @@ function Nav(props) {
   return (
     <NavWrapper className={props.className}>
       <ListItem>
-        <Link href="#">Become a host</Link>
+        <Linki href="#">Become a host</Linki>
       </ListItem>
       <ListItem>
-        <Link href="#">Help</Link>
+        <Linki href="#">Help</Linki>
       </ListItem>
       <ListItem>
-        <Link href="#">Sign Up</Link>
+        <Linki href="#">Sign Up</Linki>
       </ListItem>
       <ListItem>
-        <Link href="#">Log In</Link>
+        <Linki href="#">Log In</Linki>
       </ListItem>
+      <Route path="/help" element={<Help />} />
     </NavWrapper>
   );
 }
