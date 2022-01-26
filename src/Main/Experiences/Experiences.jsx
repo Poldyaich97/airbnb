@@ -33,7 +33,7 @@ const PriceTitle = styled.div`
   line-height: 1;
   margin-bottom: 6px;
 `;
-const TittleTitle = styled.h5`
+const SubTitle = styled.h5`
   display: inline-block;
   margin: 0px 2px 0px 0px;
   font-size: 15px;
@@ -63,7 +63,7 @@ export default function Experiences(props) {
             <StyledImage src={expImg} alt="imgOne" />
           </WrapperImage>
           <PriceTitle>
-            <TittleTitle>$29</TittleTitle>
+            <SubTitle>$29</SubTitle>
             <NameTitle>Forest therapy</NameTitle>
           </PriceTitle>
           <FooterColumn>
@@ -75,7 +75,7 @@ export default function Experiences(props) {
             <StyledImage src={expImg} alt="imgOne" />
           </WrapperImage>
           <PriceTitle>
-            <TittleTitle>$29</TittleTitle>
+            <SubTitle>$29</SubTitle>
             <NameTitle>Forest therapy</NameTitle>
           </PriceTitle>
           <FooterColumn>
@@ -87,7 +87,7 @@ export default function Experiences(props) {
             <StyledImage src={expImg} alt="imgOne" />
           </WrapperImage>
           <PriceTitle>
-            <TittleTitle>$29</TittleTitle>
+            <SubTitle>$29</SubTitle>
             <NameTitle>Table Mountain Summit, Cable Car Down</NameTitle>
           </PriceTitle>
           <FooterColumn>
@@ -99,7 +99,7 @@ export default function Experiences(props) {
             <StyledImage src={expImg} alt="imgOne" />
           </WrapperImage>
           <PriceTitle>
-            <TittleTitle>$29</TittleTitle>
+            <SubTitle>$29</SubTitle>
             <NameTitle>Forest therapy</NameTitle>
           </PriceTitle>
           <FooterColumn>

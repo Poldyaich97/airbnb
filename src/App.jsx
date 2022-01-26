@@ -7,6 +7,7 @@ import React from "react";
 import { BrowserRouter } from "react-router-dom";
 import { Route, Routes, Link } from "react-router-dom";
 import Help from "./help";
+import Root from "./Root";
 
 const AppHeader = styled(Header)`
   margin-bottom: 48px;
@@ -33,12 +34,14 @@ function App() {
       <React.Fragment>
         <StyledStub />
         <Wrapper>
-          <AppHeader />
           <Routes>
-            <Route path="/help" element={<Help />} />
+            <Route path="/" element={<Root />}>
+              <Route path="/help" element={<Help />} />
+              <Route index element={<Main />} />
+              <Route path="/login" element={<div>LogIn</div>} />
+              <Route path="/hosts" element={<div>hosts</div>} />
+            </Route>
           </Routes>
-          <Main />
-          <AppFooter />
         </Wrapper>
       </React.Fragment>
     </BrowserRouter>
