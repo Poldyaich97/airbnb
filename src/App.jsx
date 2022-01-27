@@ -32,7 +32,10 @@ function App() {
               <Route index element={<Main />} />
               <Route path="/login" element={<div>LogIn</div>} />
               <Route path="/hosts" element={<Hosts />}>
-                <Route path=":hostType" element={<Hosts />} />
+                <Route path="min" element={<div>Голяк</div>} />
+                <Route path="medium" element={<div>Норм</div>} />
+                <Route path="high" element={<div>Красавчик</div>} />
+                {/* <Route path=":hostType" element={<Hosts />} /> */}
               </Route>
             </Route>
           </Routes>
