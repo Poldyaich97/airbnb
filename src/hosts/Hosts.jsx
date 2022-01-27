@@ -8,6 +8,7 @@ const WrapperHosts = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 20px 0px;
 `;
 const Title = styled.h1`
   font-size: 32px;
@@ -16,6 +17,7 @@ const Title = styled.h1`
 const Links = styled.div`
   display: flex;
   column-gap: 20px;
+  margin-bottom: 10px;
 `;
 const StyledLink = styled(Link)`
   line-height: 24px;
