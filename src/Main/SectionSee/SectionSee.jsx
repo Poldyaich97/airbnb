@@ -8,6 +8,8 @@ const StyledLink = styled.a`
   padding-right: 16px;
   font-size: 14px;
   line-height: 24px;
+  width: 56px;
+  text-align: right;
 
   &::before {
     content: url(${Arrow});

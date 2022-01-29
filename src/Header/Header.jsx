@@ -21,7 +21,7 @@ const Logo = styled.div`
 `;
 const StyledImg = styled.img`
   width: 30px;
-  height: 30px;
+  height: 32px;
   display: block;
 `;
 function Header(props) {

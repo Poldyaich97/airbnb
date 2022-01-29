@@ -6,7 +6,6 @@ const WrapperRaiting = styled.div`
   column-gap: 8px;
 `;
 const RaitingLine = styled.div`
-  text-align: start;
   display: flex;
   column-gap: 4px;
   align-items: center;

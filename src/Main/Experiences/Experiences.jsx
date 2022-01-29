@@ -3,9 +3,7 @@ import expImg from "./expImg.png";
 import { StyledTitle } from "../SectionTitle/SectionTitle";
 import SectionSee from "../SectionSee/SectionSee.jsx";
 import Raiting from "../Raiting/RatingLine";
-const StyledExperiences = styled.div`
-  margin-bottom: 68px;
-`;
+
 const Columns = styled.div`
   display: flex;
   column-gap: 18px;
@@ -52,7 +50,7 @@ const FooterColumn = styled.div`
 
 export default function Experiences(props) {
   return (
-    <StyledExperiences className={props.className}>
+    <div className={props.className}>
       <HeaderTitle>
         <StyledTitle>Experiences</StyledTitle>
         <SectionSee />
@@ -107,6 +105,6 @@ export default function Experiences(props) {
           </FooterColumn>
         </Column>
       </Columns>
-    </StyledExperiences>
+    </div>
   );
 }

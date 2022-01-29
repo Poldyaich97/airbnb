@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { StyledTitle } from "../SectionTitle/SectionTitle";
 import SeeAll from "../SectionSee/SectionSee.jsx";
 import PopularPictureOne from "./PopularPictureOne.png";
-const StyledPopular = styled.div``;
+
 const Columns = styled.div`
   display: flex;
   column-gap: 17px;
@@ -52,7 +52,7 @@ const NameSubtitle = styled.p`
 `;
 export default function Popular() {
   return (
-    <StyledPopular>
+    <div>
       <HeaderTitle>
         <StyledTitle>Popular reservations around the world</StyledTitle>
         <SeeAll />
@@ -71,6 +71,6 @@ export default function Popular() {
           </PriceTitle>
         </div>
       </Columns>
-    </StyledPopular>
+    </div>
   );
 }

@@ -26,7 +26,6 @@ const WrapperImage = styled.div`
 `;
 const StyledImg = styled.img`
   height: 100%;
-  width: 100%;
 `;
 const StyledRight = styled.div`
   display: flex;

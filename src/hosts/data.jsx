@@ -4,6 +4,8 @@ let hosts = {
   high: "Красавчик",
 };
 
+const arrHosts = Object.entries(hosts);
+
 export function getHosts() {
   return hosts;
 }

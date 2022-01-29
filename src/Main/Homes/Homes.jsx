@@ -43,7 +43,6 @@ const NameTitle = styled.span`
 const NameSubtitle = styled.p`
   margin: 0;
   font-weight: 400;
-  line-height: 18px;
 `;
 const FooterColumn = styled.div`
   text-align: start;
