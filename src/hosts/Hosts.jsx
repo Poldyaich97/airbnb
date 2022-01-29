@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Container from "../Container/Container";
 import { Outlet, Link } from "react-router-dom";
+// import { getHosts } from "./data";
 
 const WrapperHosts = styled.div`
   width: 100%;
@@ -28,6 +29,9 @@ const StyledLink = styled(Link)`
 `;
 
 export default function Hosts(props) {
+  // let hosts = getHosts();
+  // let host = hosts.find((item) => item.id === 1);
+
   return (
     <Container>
       <WrapperHosts>

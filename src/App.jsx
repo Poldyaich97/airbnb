@@ -6,7 +6,8 @@ import { BrowserRouter } from "react-router-dom";
 import { Route, Routes } from "react-router-dom";
 import Help from "./help";
 import Root from "./Root";
-import Hosts from "./hosts/Hosts";
+import Hosts from "./Hosts/Hosts";
+import Host from "./Hosts/Host";
 
 const Wrapper = styled.div`
   @media (max-width: 480px) {
@@ -28,14 +29,11 @@ function App() {
         <Wrapper>
           <Routes>
             <Route path="/" element={<Root />}>
-              <Route path="/help" element={<Help />} />
+              <Route path="help" element={<Help />} />
               <Route index element={<Main />} />
-              <Route path="/login" element={<div>LogIn</div>} />
-              <Route path="/hosts" element={<Hosts />}>
-                <Route path="min" element={<div>Голяк</div>} />
-                <Route path="medium" element={<div>Норм</div>} />
-                <Route path="high" element={<div>Красавчик</div>} />
-                {/* <Route path=":hostType" element={<Hosts />} /> */}
+              <Route path="login" element={<div>LogIn</div>} />
+              <Route path="hosts" element={<Hosts />}>
+                <Route path=":hostId" element={<Host />} />
               </Route>
             </Route>
           </Routes>
