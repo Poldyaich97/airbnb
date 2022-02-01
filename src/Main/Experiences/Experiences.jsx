@@ -3,6 +3,11 @@ import expImg from "./expImg.png";
 import { StyledTitle } from "../SectionTitle/SectionTitle";
 import SectionSee from "../SectionSee/SectionSee.jsx";
 import Raiting from "../Raiting/RatingLine";
+import { Link } from "react-router-dom";
+const StyledLink = styled(Link)`
+  color: #383838;
+  text-decoration: none;
+`;
 
 const Columns = styled.div`
   display: flex;
@@ -53,56 +58,66 @@ export default function Experiences(props) {
     <div className={props.className}>
       <HeaderTitle>
         <StyledTitle>Experiences</StyledTitle>
-        <SectionSee />
+        <StyledLink to="cards">
+          <SectionSee />
+        </StyledLink>
       </HeaderTitle>
       <Columns>
         <Column>
-          <WrapperImage>
-            <StyledImage src={expImg} alt="imgOne" />
-          </WrapperImage>
-          <PriceTitle>
-            <SubTitle>$29</SubTitle>
-            <NameTitle>Forest therapy</NameTitle>
-          </PriceTitle>
-          <FooterColumn>
-            <Raiting />
-          </FooterColumn>
+          <StyledLink to="/cards/exp-1">
+            <WrapperImage>
+              <StyledImage src={expImg} alt="imgOne" />
+            </WrapperImage>
+            <PriceTitle>
+              <SubTitle>$29</SubTitle>
+              <NameTitle>Forest therapy</NameTitle>
+            </PriceTitle>
+            <FooterColumn>
+              <Raiting />
+            </FooterColumn>
+          </StyledLink>
         </Column>
         <Column>
-          <WrapperImage>
-            <StyledImage src={expImg} alt="imgOne" />
-          </WrapperImage>
-          <PriceTitle>
-            <SubTitle>$29</SubTitle>
-            <NameTitle>Forest therapy</NameTitle>
-          </PriceTitle>
-          <FooterColumn>
-            <Raiting />
-          </FooterColumn>
+          <StyledLink to="/cards/exp-2">
+            <WrapperImage>
+              <StyledImage src={expImg} alt="imgOne" />
+            </WrapperImage>
+            <PriceTitle>
+              <SubTitle>$29</SubTitle>
+              <NameTitle>Forest therapy</NameTitle>
+            </PriceTitle>
+            <FooterColumn>
+              <Raiting />
+            </FooterColumn>
+          </StyledLink>
         </Column>
         <Column>
-          <WrapperImage>
-            <StyledImage src={expImg} alt="imgOne" />
-          </WrapperImage>
-          <PriceTitle>
-            <SubTitle>$29</SubTitle>
-            <NameTitle>Table Mountain Summit, Cable Car Down</NameTitle>
-          </PriceTitle>
-          <FooterColumn>
-            <Raiting />
-          </FooterColumn>
+          <StyledLink to="/cards/exp-3">
+            <WrapperImage>
+              <StyledImage src={expImg} alt="imgOne" />
+            </WrapperImage>
+            <PriceTitle>
+              <SubTitle>$29</SubTitle>
+              <NameTitle>Forest therapy</NameTitle>
+            </PriceTitle>
+            <FooterColumn>
+              <Raiting />
+            </FooterColumn>
+          </StyledLink>
         </Column>
         <Column>
-          <WrapperImage>
-            <StyledImage src={expImg} alt="imgOne" />
-          </WrapperImage>
-          <PriceTitle>
-            <SubTitle>$29</SubTitle>
-            <NameTitle>Forest therapy</NameTitle>
-          </PriceTitle>
-          <FooterColumn>
-            <Raiting />
-          </FooterColumn>
+          <StyledLink to="/cards/exp-4">
+            <WrapperImage>
+              <StyledImage src={expImg} alt="imgOne" />
+            </WrapperImage>
+            <PriceTitle>
+              <SubTitle>$29</SubTitle>
+              <NameTitle>Forest therapy</NameTitle>
+            </PriceTitle>
+            <FooterColumn>
+              <Raiting />
+            </FooterColumn>
+          </StyledLink>
         </Column>
       </Columns>
     </div>

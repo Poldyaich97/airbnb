@@ -8,6 +8,9 @@ import Help from "./help";
 import Root from "./Root";
 import Hosts from "./Hosts/Hosts";
 import Host from "./Hosts/Host";
+import Experiences from "./Main/Experiences/Experiences";
+import Cards from "./Main/Experiences/Cards.jsx";
+import Card from "./Main/Experiences/Card.jsx";
 
 const Wrapper = styled.div`
   @media (max-width: 480px) {
@@ -29,11 +32,15 @@ function App() {
         <Wrapper>
           <Routes>
             <Route path="/" element={<Root />}>
-              <Route path="help" element={<Help />} />
               <Route index element={<Main />} />
+              <Route path="help" element={<Help />} />
               <Route path="login" element={<div>LogIn</div>} />
               <Route path="hosts" element={<Hosts />}>
                 <Route path=":hostId" element={<Host />} />
+              </Route>
+              <Route path="experiences" element={<Experiences />} />
+              <Route path="cards" element={<Cards />}>
+                <Route path=":Id" element={<Card />} />
               </Route>
             </Route>
           </Routes>

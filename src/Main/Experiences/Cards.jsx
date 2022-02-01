@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Container from "../Container/Container";
+import Container from "../../Container/Container";
 import { Outlet, Link } from "react-router-dom";
 
 const WrapperHosts = styled.div`
@@ -27,15 +27,15 @@ const StyledLink = styled(Link)`
   font-size: 14px;
 `;
 
-export default function Hosts(props) {
+export default function Cards(props) {
   return (
     <Container>
       <WrapperHosts>
-        <Title>Hosts</Title>
+        <Title>Cards</Title>
         <Links>
-          <StyledLink to="min">min</StyledLink>
-          <StyledLink to="medium">medium</StyledLink>
-          <StyledLink to="high">high</StyledLink>
+          <StyledLink to="exp-1">Хата 1</StyledLink>
+          <StyledLink to="exp-2">Хата 2</StyledLink>
+          <StyledLink to="exp-3">Хата 3</StyledLink>
         </Links>
         <Outlet />
       </WrapperHosts>
