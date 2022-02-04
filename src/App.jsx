@@ -34,7 +34,7 @@ function App() {
             <Route path="/" element={<Root />}>
               <Route index element={<Main />} />
               <Route path="help" element={<Help />} />
-              <Route path="login" element={<div>LogIn</div>} />
+              <Route path="login" element={<div>Login</div>} />
               <Route path="hosts" element={<Hosts />}>
                 <Route path=":hostId" element={<Host />} />
               </Route>
