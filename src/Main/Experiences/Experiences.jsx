@@ -58,9 +58,7 @@ export default function Experiences(props) {
     <div className={props.className}>
       <HeaderTitle>
         <StyledTitle>Experiences</StyledTitle>
-        <StyledLink to="cards">
-          <SectionSee />
-        </StyledLink>
+        <SectionSee to="cards" />
       </HeaderTitle>
       <Columns>
         <Column>
