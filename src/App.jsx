@@ -11,6 +11,7 @@ import Host from "./Hosts/Host";
 import Experiences from "./Main/Experiences/Experiences";
 import Cards from "./Main/Experiences/Cards.jsx";
 import Card from "./Main/Experiences/Card.jsx";
+import PageNotFound from "./PageNotFound";
 
 const Wrapper = styled.div`
   @media (max-width: 480px) {
@@ -42,6 +43,7 @@ function App() {
               <Route path="cards" element={<Cards />}>
                 <Route path=":Id" element={<Card />} />
               </Route>
+              <Route path="*" element={<PageNotFound />} />
             </Route>
           </Routes>
         </Wrapper>
