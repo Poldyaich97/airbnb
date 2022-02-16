@@ -12,6 +12,8 @@ import Experiences from "./Main/Experiences/Experiences";
 import Cards from "./Main/Experiences/Cards.jsx";
 import Card from "./Main/Experiences/Card.jsx";
 import PageNotFound from "./PageNotFound";
+import LogIn from "./Login";
+import SignIn from "./SignIn";
 
 const Wrapper = styled.div`
   @media (max-width: 480px) {
@@ -35,7 +37,8 @@ function App() {
             <Route path="/" element={<Root />}>
               <Route index element={<Main />} />
               <Route path="help" element={<Help />} />
-              <Route path="login" element={<div>Login</div>} />
+              <Route path="login" element={<LogIn />} />
+              <Route path="signIn" element={<SignIn />} />
               <Route path="hosts" element={<Hosts />}>
                 <Route path=":hostId" element={<Host />} />
               </Route>
