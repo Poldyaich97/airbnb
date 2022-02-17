@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import search from "./search.svg";
+import { useState } from "react";
+import React from "react";
 
 const Wrapper = styled.label`
   position: relative;
@@ -26,9 +28,25 @@ const Input = styled.input`
 `;
 
 export default function Search() {
+  let textInput = React.createRef();
+  const [output, setOutput] = useState("Hello");
+  console.log({ output });
+
+  function showInput(event) {
+    // console.log(event.target.value);!
+    // setOutput(event.target.value);
+    setOutput(textInput.current.value);
+  }
+
   return (
     <Wrapper>
-      <Input type="search" placeholder="Try “Miami”" />
+      <Input
+        type="search"
+        placeholder="Try “Miami”"
+        onInput={showInput}
+        defaultvalue={output}
+        ref={textInput}
+      />
     </Wrapper>
   );
 }
