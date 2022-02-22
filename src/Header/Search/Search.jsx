@@ -33,8 +33,6 @@ export default function Search() {
   console.log({ output });
 
   function showInput(event) {
-    // console.log(event.target.value);!
-    // setOutput(event.target.value);
     setOutput(textInput.current.value);
   }
 
@@ -44,7 +42,7 @@ export default function Search() {
         type="search"
         placeholder="Try “Miami”"
         onInput={showInput}
-        defaultvalue={output}
+        value={output}
         ref={textInput}
       />
     </Wrapper>
