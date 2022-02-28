@@ -30,7 +30,6 @@ const Input = styled.input`
 export default function Search() {
   let textInput = React.createRef();
   const [output, setOutput] = useState("Hello");
-  console.log({ output });
 
   function showInput(event) {
     setOutput(textInput.current.value);

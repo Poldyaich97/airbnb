@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { StyledTitle } from "../SectionTitle/SectionTitle";
-import featured from "./Featured.png";
+import React, { useState, useEffect } from "react";
+import FeaturedCard from "./FeaturedCard";
 
 const Title = styled(StyledTitle)`
   margin-bottom: 24px;
@@ -11,37 +12,25 @@ const Columns = styled.div`
   column-gap: 18px;
 `;
 const Column = styled.div``;
-const HeaderColumn = styled.div`
-  margin-bottom: 8px;
-`;
-const WrapperImage = styled.div`
-  height: 220px;
-`;
-const StyledImage = styled.img`
-  object-fit: contain;
-  width: 100%;
-  height: 100%;
-  display: block;
-`;
-const TittleTitle = styled.h5`
-  display: inline-block;
-  margin: 0px 2px 0px 0px;
-  font-size: 15px;
-  line-height: 18px;
-`;
+
 export default function Featured(props) {
+  const [result, setResult] = useState({ data: [] });
+  useEffect(() => {
+    const API = "https://ipwbxlctkx.api.quickmocker.com/destinations";
+    fetch(API)
+      .then((res) => res.json())
+      .then((data) => setResult(data));
+  }, []);
+
   return (
     <div className={props.className}>
       <Title>Featured destinations</Title>
       <Columns>
-        <Column>
-          <HeaderColumn>
-            <WrapperImage>
-              <StyledImage src={featured} alt="imgOne" />
-            </WrapperImage>
-          </HeaderColumn>
-          <TittleTitle className="featured__column_title">Paris</TittleTitle>
-        </Column>
+        {result.data.map((element, pos) => (
+          <Column key={pos}>
+            <FeaturedCard scr={element.imageSource} title={element.title} />
+          </Column>
+        ))}
       </Columns>
     </div>
   );
