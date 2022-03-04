@@ -17,40 +17,13 @@ const HeaderTitle = styled.div`
 `;
 
 export default function Popular() {
-  const [resultat, setResultat] = useState({ data: [] });
+  const [resultat, setResultat] = useState([]);
   useEffect(() => {
     const API = "https://ipwbxlctkx.api.quickmocker.com/reservations";
     fetch(API)
       .then((res) => res.json())
       .then((data) => setResultat(data));
   }, []);
-
-  const a = [
-    {
-      type: "Generic Soft Chips",
-      title: "Oliver",
-      price: 72,
-      imageSource: "https://i.ibb.co/cC55P1P/Rectangle-6-1.png",
-    },
-    {
-      type: "Intelligent Cotton Salad",
-      title: "Michele",
-      price: 55,
-      imageSource: "https://i.ibb.co/SV14Pc9/Rectangle-6.png",
-    },
-    {
-      type: "Generic Cotton Mouse",
-      title: "Max",
-      price: 87,
-      imageSource: "https://i.ibb.co/V9cvST7/Rectangle-6-3.png",
-    },
-    {
-      type: "Licensed Cotton Gloves",
-      title: "Bessie",
-      price: 1,
-      imageSource: "https://i.ibb.co/VJ2QgBZ/Rectangle-6-2.png",
-    },
-  ];
 
   return (
     <div>
@@ -59,10 +32,10 @@ export default function Popular() {
         <SeeAll />
       </HeaderTitle>
       <Columns>
-        {a.map((element, pos) => (
+        {resultat.slice(0, 4).map((element, pos) => (
           <div key={pos}>
             <PopularCard
-              scr={element.imageSource}
+              scr={element.imageSouce}
               title={element.title}
               price={element.price}
               type={element.type}
