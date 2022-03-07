@@ -1,11 +1,12 @@
 import styled from "styled-components";
 import { StyledTitle } from "../SectionTitle/SectionTitle";
 import SeeAll from "../SectionSee/SectionSee.jsx";
-import PopularPictureOne from "./PopularPictureOne.png";
+import React, { useState, useEffect } from "react";
+import PopularCard from "./PopularCard";
 
 const Columns = styled.div`
   display: flex;
-  column-gap: 17px;
+  column-gap: 22px;
   overflow: hidden;
   padding: 24px 0px 64px 0px;
 `;
@@ -15,42 +16,15 @@ const HeaderTitle = styled.div`
   align-items: center;
 `;
 
-const HeaderColumn = styled.div`
-  margin-bottom: 12px;
-`;
-const WrapperImage = styled.div`
-  height: 160px;
-`;
-const StyledImage = styled.img`
-  object-fit: contain;
-  width: 100%;
-  height: 100%;
-  display: block;
-`;
-const PriceTitle = styled.div`
-  font-weight: bold;
-`;
-const СountryTitle = styled.h5`
-  display: block;
-  font-size: 10px;
-  line-height: 12px;
-  margin: 0px;
-  text-transform: uppercase;
-`;
-const NameTitle = styled.span`
-  font-size: 18px;
-  line-height: 21px;
-  display: block;
-  padding: 4px 0px;
-  margin: 0;
-`;
-const NameSubtitle = styled.p`
-  margin: 0;
-  font-size: 18px;
-  line-height: 21px;
-  font-weight: 300;
-`;
 export default function Popular() {
+  const [resultat, setResultat] = useState([]);
+  useEffect(() => {
+    const API = "https://ipwbxlctkx.api.quickmocker.com/reservations";
+    fetch(API)
+      .then((res) => res.json())
+      .then((data) => setResultat(data));
+  }, []);
+
   return (
     <div>
       <HeaderTitle>
@@ -58,18 +32,16 @@ export default function Popular() {
         <SeeAll />
       </HeaderTitle>
       <Columns>
-        <div>
-          <HeaderColumn>
-            <WrapperImage>
-              <StyledImage src={PopularPictureOne} alt="imgOne" />
-            </WrapperImage>
-          </HeaderColumn>
-          <PriceTitle>
-            <СountryTitle>Speakeasy</СountryTitle>
-            <NameTitle>Chumley’s</NameTitle>
-            <NameSubtitle>About $60 per person</NameSubtitle>
-          </PriceTitle>
-        </div>
+        {resultat.slice(0, 4).map((element, pos) => (
+          <div key={pos}>
+            <PopularCard
+              scr={element.imageSouce}
+              title={element.title}
+              price={element.price}
+              type={element.type}
+            />
+          </div>
+        ))}
       </Columns>
     </div>
   );

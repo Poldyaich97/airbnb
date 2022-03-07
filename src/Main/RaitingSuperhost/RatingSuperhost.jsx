@@ -20,7 +20,7 @@ const ReviewsLine = styled.p`
   font-size: 12px;
   line-height: 16px;
 `;
-export default function RatingSuperhost() {
+export default function RatingSuperhost(props) {
   return (
     <WrapperRaiting>
       <RaitingLine>

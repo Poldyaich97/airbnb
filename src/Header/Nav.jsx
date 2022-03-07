@@ -26,7 +26,7 @@ function Nav(props) {
         <StyledLink to="/help">Help</StyledLink>
       </ListItem>
       <ListItem>
-        <StyledLink to="#">Sign Up</StyledLink>
+        <StyledLink to="/signIn">Sign Up</StyledLink>
       </ListItem>
       <ListItem>
         <StyledLink to="/login">Log In</StyledLink>

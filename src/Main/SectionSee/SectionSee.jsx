@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import Arrow from "./arrow.svg";
+import { Link } from "react-router-dom";
 
-const StyledLink = styled.a`
+const StyledLink = styled(Link)`
   text-decoration: none;
   position: relative;
   color: #383838;
@@ -19,6 +20,6 @@ const StyledLink = styled.a`
     z-index: 1;
   }
 `;
-export default function SectionSee() {
-  return <StyledLink href="#">See all</StyledLink>;
+export default function SectionSee(props) {
+  return <StyledLink to={props.to || ""}>See all</StyledLink>;
 }
