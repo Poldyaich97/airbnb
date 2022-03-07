@@ -45,7 +45,7 @@ export default function PopularCard(props) {
         <PriceTitle>
           <СountryTitle>{props.type}</СountryTitle>
           <NameTitle>{props.title}</NameTitle>
-          <NameSubtitle>{props.price}</NameSubtitle>
+          <NameSubtitle>About ${props.price} per person</NameSubtitle>
         </PriceTitle>
       </Wrapper>
     </React.Fragment>

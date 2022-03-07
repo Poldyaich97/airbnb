@@ -3,6 +3,7 @@ import React from "react";
 
 const WrapperImage = styled.div`
   height: 220px;
+  margin-bottom: 8px;
 `;
 const StyledImage = styled.img`
   object-fit: contain;
