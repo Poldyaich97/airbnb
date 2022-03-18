@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import expImg from "./expImg.png";
 import Raiting from "../Raiting/RatingLine";
 import { Link } from "react-router-dom";
 const StyledLink = styled(Link)`
@@ -8,15 +7,23 @@ const StyledLink = styled(Link)`
 `;
 
 const Column = styled.div`
-  width: 230px;
+  height: 395px;
+  width: 228px;
+  @media (max-width: 1024px) {
+    width: 240px;
+  }
+  @media (max-width: 700px) {
+    width: 144px;
+    height: 280px;
+  }
 `;
 const WrapperImage = styled.div`
-  height: 350px;
   margin-bottom: 8px;
 `;
 const StyledImage = styled.img`
   object-fit: cover;
   height: 100%;
+  width: 100%;
   display: block;
 `;
 const PriceTitle = styled.div`
@@ -29,15 +36,27 @@ const SubTitle = styled.h5`
   font-size: 15px;
   line-height: 18px;
   font-weight: bold;
+  @media (max-width: 700px) {
+    font-size: 13px;
+    line-height: 15px;
+  }
 `;
 const NameTitle = styled.span`
   font-size: 15px;
   line-height: 18px;
   font-weight: 300;
+  @media (max-width: 700px) {
+    font-size: 13px;
+    line-height: 15px;
+  }
 `;
 const FooterColumn = styled.div`
   text-align: start;
   line-height: 16px;
+  @media (max-width: 700px) {
+    font-size: 12px;
+    line-height: 15px;
+  }
 `;
 
 export default function ExperiencesCard(props) {
@@ -46,11 +65,11 @@ export default function ExperiencesCard(props) {
       <Column>
         <StyledLink to="/cards/exp-1">
           <WrapperImage>
-            <StyledImage src={expImg} alt="imgOne" />
+            <StyledImage src={props.scr} alt="imgOne" />
           </WrapperImage>
           <PriceTitle>
-            <SubTitle>$29</SubTitle>
-            <NameTitle>Forest therapy</NameTitle>
+            <SubTitle>${props.price}</SubTitle>
+            <NameTitle>{props.title}</NameTitle>
           </PriceTitle>
           <FooterColumn>
             <Raiting />

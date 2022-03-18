@@ -15,6 +15,9 @@ const Content = styled.div`
 `;
 const StyledNav = styled(Nav)`
   margin-left: auto;
+  @media (max-width: 700px) {
+    display: none;
+  }
 `;
 const Logo = styled.div`
   margin-right: 50px;

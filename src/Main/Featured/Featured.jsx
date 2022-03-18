@@ -14,6 +14,17 @@ const Columns = styled.div`
 const Column = styled.div``;
 
 export default function Featured(props) {
+  let NumCard;
+  if (window.innerWidth > 1024) {
+    NumCard = 6;
+    console.log(NumCard);
+  } else if (window.innerWidth > 750) {
+    NumCard = 4;
+    console.log(NumCard);
+  } else {
+    NumCard = 3;
+    console.log(NumCard);
+  }
   const [result, setResult] = useState({ data: [] });
   useEffect(() => {
     const API = "https://ipwbxlctkx.api.quickmocker.com/destinations";
@@ -26,7 +37,7 @@ export default function Featured(props) {
     <div className={props.className}>
       <Title>Featured destinations</Title>
       <Columns>
-        {result.data.map((element, pos) => (
+        {result.data.slice(0, NumCard).map((element, pos) => (
           <Column key={pos}>
             <FeaturedCard scr={element.imageSource} title={element.title} />
           </Column>

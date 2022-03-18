@@ -28,6 +28,9 @@ const Informations = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
+  @media (max-width: 700px) {
+    display: none;
+  }
 `;
 const Column = styled.div`
   display: inline-block;
@@ -54,6 +57,10 @@ const Underground = styled.div`
   padding: 12px 0px 35px 0px;
   display: flex;
   box-shadow: 0px -0.5px 0px rgba(72, 72, 72, 0.3);
+  @media (max-width: 700px) {
+    flex-direction: column;
+    row-gap: 12px;
+  }
 `;
 const StyledLogo = styled.div`
   margin-right: 10px;
@@ -71,6 +78,8 @@ const StyledParagraph = styled.p`
 const StyledLeft = styled.div`
   display: flex;
   align-items: center;
+  @media (max-width: 700px) {
+  }
 `;
 const StyledRight = styled.div`
   margin-left: auto;
@@ -82,6 +91,10 @@ const StyledNavigation = styled.ul`
   margin: 0;
   display: flex;
   column-gap: 16px;
+  @media (max-width: 700px) {
+    margin-left: 0;
+    column-gap: 12px;
+  }
 `;
 const StyledIcons = styled.div`
   display: flex;

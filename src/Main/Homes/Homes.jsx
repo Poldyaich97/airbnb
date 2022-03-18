@@ -16,6 +16,14 @@ const HeaderTitle = styled.div`
 `;
 
 export default function Homes(props) {
+  let NumCard;
+  if (window.innerWidth > 1024) {
+    NumCard = 3;
+    console.log(NumCard);
+  } else {
+    NumCard = 2;
+    console.log(NumCard);
+  }
   const [resultat, setResultat] = useState([]);
   useEffect(() => {
     const API = "https://ipwbxlctkx.api.quickmocker.com/homes";
@@ -31,15 +39,16 @@ export default function Homes(props) {
         <SeeAll />
       </HeaderTitle>
       <Columns>
-        {resultat.slice(0, 3).map((element, pos) => (
-          <HomesCards
-            scr={element.imageSource}
-            price={element.price}
-            houseType={element.houseType}
-            bedsCount={element.bedsCount}
-            title={element.title}
-            key={pos}
-          />
+        {resultat.slice(0, NumCard).map((element, pos) => (
+          <div key={pos}>
+            <HomesCards
+              scr={element.imageSource}
+              price={element.price}
+              houseType={element.houseType}
+              bedsCount={element.bedsCount}
+              title={element.title}
+            />
+          </div>
         ))}
       </Columns>
     </div>

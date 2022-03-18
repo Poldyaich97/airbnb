@@ -18,16 +18,27 @@ const Column = styled.div`
   box-shadow: 0px 2px 4px rgba(72, 72, 72, 0.08);
   border-radius: 4px;
   display: flex;
-  flex-basis: 100%;
+  width: 310px;
+  @media (max-width: 1024px) {
+    width: 236px;
+    flex-direction: column;
+  }
 `;
 const WrapperImage = styled.div`
+  width: 96px;
   height: 72px;
   margin-right: 24px;
+  @media (max-width: 700px) {
+    width: 144px;
+    height: 78px;
+    margin-right: 0px;
+  }
 `;
 const StyledImg = styled.img`
   height: 100%;
+  width: 100%;
 `;
-const StyledRight = styled.div`
+const StyledText = styled.div`
   display: flex;
   align-items: center;
 `;
@@ -37,6 +48,9 @@ const Description = styled.p`
   text-align: center;
   margin: 0;
   font-weight: bold;
+  @media (max-width: 700px) {
+    padding: 16px 0px 16px 12px;
+  }
 `;
 
 export default function Explore(props) {
@@ -48,28 +62,28 @@ export default function Explore(props) {
           <WrapperImage>
             <StyledImg src={experiencesOne} />
           </WrapperImage>
-          <StyledRight>
+          <StyledText>
             <Description>Homes</Description>
-          </StyledRight>
+          </StyledText>
         </Column>
         <Column>
           <WrapperImage>
             <StyledImg src={experiencesTwo} />
           </WrapperImage>
 
-          <StyledRight>
+          <StyledText>
             <Description>Experiences</Description>
-          </StyledRight>
+          </StyledText>
         </Column>
-        <Column>
+        {/* <Column>
           <WrapperImage>
             <StyledImg src={experiencesThree} />
           </WrapperImage>
 
-          <StyledRight>
+          <StyledText>
             <Description>Restaurants</Description>
-          </StyledRight>
-        </Column>
+          </StyledText>
+        </Column> */}
       </Columns>
     </div>
   );

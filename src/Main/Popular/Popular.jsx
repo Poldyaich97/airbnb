@@ -17,6 +17,17 @@ const HeaderTitle = styled.div`
 `;
 
 export default function Popular() {
+  let NumCard;
+  if (window.innerWidth > 1024) {
+    NumCard = 4;
+    console.log(NumCard);
+  } else if (window.innerWidth > 750) {
+    NumCard = 3;
+    console.log(NumCard);
+  } else {
+    NumCard = 2;
+    console.log(NumCard);
+  }
   const [resultat, setResultat] = useState([]);
   useEffect(() => {
     const API = "https://ipwbxlctkx.api.quickmocker.com/reservations";
@@ -32,7 +43,7 @@ export default function Popular() {
         <SeeAll />
       </HeaderTitle>
       <Columns>
-        {resultat.slice(0, 4).map((element, pos) => (
+        {resultat.slice(0, NumCard).map((element, pos) => (
           <div key={pos}>
             <PopularCard
               scr={element.imageSouce}

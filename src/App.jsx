@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Stub from "./mobilStub/Stub";
+import Container from "./Container/Container";
 import Main from "./Main/Main";
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
@@ -17,13 +18,13 @@ import SignIn from "./SignIn";
 
 const Wrapper = styled.div`
   @media (max-width: 480px) {
-    display: none;
+    // display: none;
   }
 `;
 
 const StyledStub = styled(Stub)`
   @media (min-width: 480px) {
-    display: none;
+    // display: none;
   } ;
 `;
 
@@ -31,7 +32,8 @@ function App() {
   return (
     <BrowserRouter>
       <React.Fragment>
-        <StyledStub />
+        {/* <StyledStub /> */}
+
         <Wrapper>
           <Routes>
             <Route path="/" element={<Root />}>
