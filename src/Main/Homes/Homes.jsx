@@ -6,6 +6,9 @@ import React, { useState, useEffect } from "react";
 const Columns = styled.div`
   display: flex;
   column-gap: 18px;
+  @media (max-width: 700px) {
+    column-gap: 8px;
+  }
 `;
 const HeaderTitle = styled.div`
   display: flex;

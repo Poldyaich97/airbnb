@@ -8,12 +8,12 @@ const Columns = styled.div`
   display: flex;
   column-gap: 22px;
   overflow: hidden;
-  padding: 24px 0px 64px 0px;
 `;
 const HeaderTitle = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 24px;
 `;
 
 export default function Popular() {

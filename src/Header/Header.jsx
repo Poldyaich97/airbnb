@@ -21,6 +21,9 @@ const StyledNav = styled(Nav)`
 `;
 const Logo = styled.div`
   margin-right: 50px;
+  @media (max-width: 700px) {
+    margin-right: 24px;
+  }
 `;
 const StyledImg = styled.img`
   width: 30px;

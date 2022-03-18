@@ -4,11 +4,9 @@ import Raiting from "../RaitingSuperhost/RatingSuperhost";
 const HeaderColumn = styled.div`
   margin-bottom: 8px;
 `;
-const WrapperImage = styled.div`
-  height: 204px;
-`;
+
 const StyledImage = styled.img`
-  object-fit: contain;
+  object-fit: fill;
   width: 100%;
   height: 100%;
   display: block;
@@ -29,6 +27,11 @@ const NameTitle = styled.span`
 const NameSubtitle = styled.p`
   margin: 0;
   font-weight: 400;
+  @media (max-width: 700px) {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 15px;
+  }
 `;
 const FooterColumn = styled.div`
   text-align: start;
@@ -43,9 +46,7 @@ export default function HomesCards(props, data) {
   return (
     <div>
       <HeaderColumn>
-        <WrapperImage>
-          <StyledImage src={props.scr} alt="imgOne" />
-        </WrapperImage>
+        <StyledImage src={props.scr} alt="imgOne" />
       </HeaderColumn>
       <PriceTitle>
         <SubTitle>${props.price}</SubTitle>

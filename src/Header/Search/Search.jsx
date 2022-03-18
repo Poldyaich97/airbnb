@@ -26,7 +26,7 @@ const Input = styled.input`
   padding: 11px 12px 11px 40px;
   border-radius: 4px;
   @media (max-width: 700px) {
-    width: 250px;
+    width: 254px;
   }
 `;
 
