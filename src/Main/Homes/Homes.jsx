@@ -6,8 +6,8 @@ import React, { useState, useEffect } from "react";
 const Columns = styled.div`
   display: flex;
   column-gap: 18px;
-  @media (max-width: 700px) {
-    column-gap: 8px;
+  @media (max-width: 1024px) {
+    column-gap: 16px;
   }
 `;
 const HeaderTitle = styled.div`
@@ -20,14 +20,12 @@ const HeaderTitle = styled.div`
 
 export default function Homes(props) {
   let NumCard;
-  if (window.innerWidth > 1024) {
+  if (window.innerWidth > 750) {
     NumCard = 3;
-    console.log(NumCard);
   } else {
     NumCard = 2;
-    console.log(NumCard);
   }
-  const [resultat, setResultat] = useState([]);
+  const [result, setResultat] = useState([]);
   useEffect(() => {
     const API = "https://ipwbxlctkx.api.quickmocker.com/homes";
     fetch(API)
@@ -42,7 +40,7 @@ export default function Homes(props) {
         <SeeAll />
       </HeaderTitle>
       <Columns>
-        {resultat.slice(0, NumCard).map((element, pos) => (
+        {result.slice(0, NumCard).map((element, pos) => (
           <div key={pos}>
             <HomesCards
               scr={element.imageSource}

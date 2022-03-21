@@ -3,10 +3,20 @@ import Raiting from "../RaitingSuperhost/RatingSuperhost";
 
 const HeaderColumn = styled.div`
   margin-bottom: 8px;
+  height: 204px;
+  width: 310px;
+  @media (max-width: 1024px) {
+    height: 158px;
+    width: 240px;
+  }
+  @media (max-width: 750px) {
+    width: 135px;
+    height: 92px;
+  }
 `;
 
 const StyledImage = styled.img`
-  object-fit: fill;
+  object-fit: cover;
   width: 100%;
   height: 100%;
   display: block;
@@ -27,7 +37,7 @@ const NameTitle = styled.span`
 const NameSubtitle = styled.p`
   margin: 0;
   font-weight: 400;
-  @media (max-width: 700px) {
+  @media (max-width: 750px) {
     font-weight: 300;
     font-size: 12px;
     line-height: 15px;

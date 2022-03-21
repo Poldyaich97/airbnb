@@ -12,7 +12,7 @@ const Column = styled.div`
   @media (max-width: 1024px) {
     width: 240px;
   }
-  @media (max-width: 700px) {
+  @media (max-width: 750px) {
     width: 144px;
     height: 280px;
   }
@@ -36,7 +36,7 @@ const SubTitle = styled.h5`
   font-size: 15px;
   line-height: 18px;
   font-weight: bold;
-  @media (max-width: 700px) {
+  @media (max-width: 750px) {
     font-size: 13px;
     line-height: 15px;
   }
@@ -45,7 +45,7 @@ const NameTitle = styled.span`
   font-size: 15px;
   line-height: 18px;
   font-weight: 300;
-  @media (max-width: 700px) {
+  @media (max-width: 750px) {
     font-size: 13px;
     line-height: 15px;
   }
@@ -53,7 +53,7 @@ const NameTitle = styled.span`
 const FooterColumn = styled.div`
   text-align: start;
   line-height: 16px;
-  @media (max-width: 700px) {
+  @media (max-width: 750px) {
     font-size: 12px;
     line-height: 15px;
   }

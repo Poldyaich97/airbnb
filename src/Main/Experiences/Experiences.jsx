@@ -21,13 +21,10 @@ export default function Experiences(props) {
   let NumCard;
   if (window.innerWidth > 1024) {
     NumCard = 4;
-    console.log(NumCard);
   } else if (window.innerWidth > 750) {
     NumCard = 3;
-    console.log(NumCard);
   } else {
     NumCard = 2;
-    console.log(NumCard);
   }
   const [resultat, setResultat] = useState([]);
   useEffect(() => {

@@ -17,13 +17,10 @@ export default function Featured(props) {
   let NumCard;
   if (window.innerWidth > 1024) {
     NumCard = 6;
-    console.log(NumCard);
   } else if (window.innerWidth > 750) {
     NumCard = 4;
-    console.log(NumCard);
   } else {
     NumCard = 3;
-    console.log(NumCard);
   }
   const [result, setResult] = useState({ data: [] });
   useEffect(() => {

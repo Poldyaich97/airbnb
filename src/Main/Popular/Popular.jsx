@@ -6,8 +6,10 @@ import PopularCard from "./PopularCard";
 
 const Columns = styled.div`
   display: flex;
-  column-gap: 22px;
-  overflow: hidden;
+  column-gap: 18px;
+  @media (max-width: 1024px) {
+    column-gap: 16px;
+  }
 `;
 const HeaderTitle = styled.div`
   display: flex;
@@ -20,13 +22,10 @@ export default function Popular() {
   let NumCard;
   if (window.innerWidth > 1024) {
     NumCard = 4;
-    console.log(NumCard);
   } else if (window.innerWidth > 750) {
     NumCard = 3;
-    console.log(NumCard);
   } else {
     NumCard = 2;
-    console.log(NumCard);
   }
   const [resultat, setResultat] = useState([]);
   useEffect(() => {

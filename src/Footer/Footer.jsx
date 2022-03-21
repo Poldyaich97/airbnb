@@ -28,7 +28,7 @@ const Informations = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
-  @media (max-width: 700px) {
+  @media (max-width: 750px) {
     display: none;
   }
 `;
@@ -57,7 +57,7 @@ const Underground = styled.div`
   padding: 12px 0px 35px 0px;
   display: flex;
   box-shadow: 0px -0.5px 0px rgba(72, 72, 72, 0.3);
-  @media (max-width: 700px) {
+  @media (max-width: 750px) {
     flex-direction: column;
     row-gap: 12px;
   }
@@ -78,7 +78,7 @@ const StyledParagraph = styled.p`
 const StyledLeft = styled.div`
   display: flex;
   align-items: center;
-  @media (max-width: 700px) {
+  @media (max-width: 750px) {
   }
 `;
 const StyledRight = styled.div`
@@ -91,7 +91,7 @@ const StyledNavigation = styled.ul`
   margin: 0;
   display: flex;
   column-gap: 16px;
-  @media (max-width: 700px) {
+  @media (max-width: 750px) {
     margin-left: 0;
     column-gap: 12px;
   }

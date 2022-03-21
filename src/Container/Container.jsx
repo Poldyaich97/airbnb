@@ -8,7 +8,7 @@ const Container = styled.div`
     width: 750px;
   }
 
-  @media (max-width: 700px) {
+  @media (max-width: 750px) {
     width: 306px;
   }
 `;

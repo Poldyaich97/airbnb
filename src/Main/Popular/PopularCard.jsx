@@ -3,9 +3,19 @@ import React from "react";
 
 const HeaderColumn = styled.div`
   margin-bottom: 12px;
+  height: 164px;
+  width: 229px;
+  @media (max-width: 1024px) {
+    width: 240px;
+  }
+  @media (max-width: 750px) {
+    width: 144px;
+    height: 108px;
+  }
 `;
+
 const StyledImage = styled.img`
-  object-fit: contain;
+  object-fit: cover;
   width: 100%;
   height: 100%;
   display: block;
