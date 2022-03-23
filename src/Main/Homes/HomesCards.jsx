@@ -23,6 +23,17 @@ const StyledImage = styled.img`
 `;
 const PriceTitle = styled.div`
   font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2px;
+  margin-bottom: 7px;
+  @media (max-width: 1024px) {
+    margin-bottom: 5px;
+  }
+
+  @media (max-width: 750px) {
+    margin-bottom: 4px;
+  }
 `;
 const SubTitle = styled.h5`
   display: inline-block;
@@ -33,13 +44,17 @@ const SubTitle = styled.h5`
 const NameTitle = styled.span`
   font-size: 15px;
   line-height: 18px;
+  @media (max-width: 750px) {
+    font-size: 13px;
+    line-height: 15px;
+  }
 `;
 const NameSubtitle = styled.p`
   margin: 0;
   font-weight: 400;
   @media (max-width: 750px) {
     font-weight: 300;
-    font-size: 12px;
+    font-size: 13px;
     line-height: 15px;
   }
 `;
@@ -59,8 +74,10 @@ export default function HomesCards(props, data) {
         <StyledImage src={props.scr} alt="imgOne" />
       </HeaderColumn>
       <PriceTitle>
-        <SubTitle>${props.price}</SubTitle>
-        <NameTitle>{props.title}</NameTitle>
+        <div>
+          <SubTitle>${props.price}</SubTitle>
+          <NameTitle>{props.title}</NameTitle>
+        </div>
         <NameSubtitle>
           {props.houseType} · {props.bedsCount} {result}
         </NameSubtitle>

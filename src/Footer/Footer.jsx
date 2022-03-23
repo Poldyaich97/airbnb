@@ -43,6 +43,9 @@ const Title = styled.h5`
 const List = styled.ul`
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
 `;
 const Element = styled.li`
   list-style: none;

@@ -54,7 +54,7 @@ const FooterColumn = styled.div`
   text-align: start;
   line-height: 16px;
   @media (max-width: 750px) {
-    font-size: 12px;
+    font-size: 13px;
     line-height: 15px;
   }
 `;

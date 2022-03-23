@@ -11,7 +11,12 @@ const AppHeader = styled(Header)`
 `;
 
 const AppFooter = styled(Footer)`
+  margin-top: 64px;
   margin-bottom: 48px;
+  @media (max-width: 750px) {
+    margin-top: 40px;
+    margin-bottom: 18px;
+  }
 `;
 
 function Root() {

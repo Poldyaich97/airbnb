@@ -13,6 +13,15 @@ const RaitingLine = styled.div`
 const StarImage = styled.img`
   width: 12px;
   height: 12px;
+  @media (max-width: 1024px) {
+    width: 9px;
+    height: 9px;
+  }
+
+  @media (max-width: 750px) {
+    width: 7px;
+    height: 7px;
+  }
 `;
 
 export default function RatingLine() {
