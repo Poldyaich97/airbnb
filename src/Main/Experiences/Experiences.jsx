@@ -3,6 +3,7 @@ import { StyledTitle } from "../SectionTitle/SectionTitle";
 import SectionSee from "../SectionSee/SectionSee.jsx";
 import ExperiencesCard from "./ExperiencesCard";
 import React, { useState, useEffect } from "react";
+import getCardsNumber from "../getCards";
 
 const HeaderTitle = styled.div`
   display: flex;
@@ -18,20 +19,17 @@ const Columns = styled.div`
 `;
 
 export default function Experiences(props) {
-  let NumCard;
-  if (window.innerWidth > 1024) {
-    NumCard = 4;
-  } else if (window.innerWidth > 750) {
-    NumCard = 3;
-  } else {
-    NumCard = 2;
-  }
-  const [resultat, setResultat] = useState([]);
+  const [result, setResult] = useState([]);
+  const [cardNumber, setCardNumber] = useState(getCardsNumber([4, 3, 2]));
+
   useEffect(() => {
+    window.addEventListener("resize", () => {
+      setCardNumber(getCardsNumber([4, 3, 2]));
+    });
     const API = "https://ipwbxlctkx.api.quickmocker.com/experiences";
     fetch(API)
       .then((res) => res.json())
-      .then((data) => setResultat(data));
+      .then((data) => setResult(data));
   }, []);
 
   return (
@@ -41,7 +39,7 @@ export default function Experiences(props) {
         <SectionSee to="cards" />
       </HeaderTitle>
       <Columns>
-        {resultat.slice(0, NumCard).map((element, pos) => (
+        {result.slice(0, cardNumber).map((element, pos) => (
           <div key={pos}>
             <ExperiencesCard
               scr={element.imageSource}

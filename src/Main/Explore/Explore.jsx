@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { StyledTitle } from "../SectionTitle/SectionTitle";
 import ExploreCard from "./ExploreCard";
 import React, { useState, useEffect } from "react";
+import getCardsNumber from "../getCards";
 
 const Title = styled(StyledTitle)`
   margin-bottom: 24px;
@@ -14,24 +15,23 @@ const Columns = styled.div`
 `;
 
 export default function Explore(props) {
-  let NumCard;
-  if (window.innerWidth > 750) {
-    NumCard = 3;
-  } else {
-    NumCard = 2;
-  }
-  const [result, setResultat] = useState([]);
+  const [result, setResult] = useState([]);
+  const [cardNumber, setCardNumber] = useState(getCardsNumber([3, 3, 2]));
+
   useEffect(() => {
+    window.addEventListener("resize", () => {
+      setCardNumber(getCardsNumber([3, 3, 2]));
+    });
     const API = "https://ipwbxlctkx.api.quickmocker.com/Explore";
     fetch(API)
       .then((res) => res.json())
-      .then((data) => setResultat(data));
+      .then((data) => setResult(data));
   }, []);
   return (
     <div className={props.className}>
       <Title>Explore Airbnb</Title>
       <Columns>
-        {result.slice(0, NumCard).map((element, pos) => (
+        {result.slice(0, cardNumber).map((element, pos) => (
           <div key={pos}>
             <ExploreCard scr={element.imageSouce} title={element.title} />
           </div>

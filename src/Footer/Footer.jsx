@@ -81,8 +81,6 @@ const StyledParagraph = styled.p`
 const StyledLeft = styled.div`
   display: flex;
   align-items: center;
-  @media (max-width: 750px) {
-  }
 `;
 const StyledRight = styled.div`
   margin-left: auto;

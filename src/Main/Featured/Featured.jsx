@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { StyledTitle } from "../SectionTitle/SectionTitle";
 import React, { useState, useEffect } from "react";
 import FeaturedCard from "./FeaturedCard";
+import getCardsNumber from "../getCards";
 
 const Title = styled(StyledTitle)`
   margin-bottom: 24px;
@@ -14,16 +15,13 @@ const Columns = styled.div`
 const Column = styled.div``;
 
 export default function Featured(props) {
-  let NumCard;
-  if (window.innerWidth > 1024) {
-    NumCard = 6;
-  } else if (window.innerWidth > 750) {
-    NumCard = 4;
-  } else {
-    NumCard = 3;
-  }
   const [result, setResult] = useState({ data: [] });
+  const [cardNumber, setCardNumber] = useState(getCardsNumber([6, 4, 3]));
+
   useEffect(() => {
+    window.addEventListener("resize", () => {
+      setCardNumber(getCardsNumber([6, 4, 3]));
+    });
     const API = "https://ipwbxlctkx.api.quickmocker.com/destinations";
     fetch(API)
       .then((res) => res.json())
@@ -34,7 +32,7 @@ export default function Featured(props) {
     <div className={props.className}>
       <Title>Featured destinations</Title>
       <Columns>
-        {result.data.slice(0, NumCard).map((element, pos) => (
+        {result.data.slice(0, cardNumber).map((element, pos) => (
           <Column key={pos}>
             <FeaturedCard scr={element.imageSource} title={element.title} />
           </Column>
