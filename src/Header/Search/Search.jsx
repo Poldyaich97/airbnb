@@ -28,11 +28,10 @@ const Input = styled.input`
 `;
 
 export default function Search() {
-  let textInput = React.createRef();
-  const [output, setOutput] = useState("Hello");
+  const [output, setOutput] = useState("");
 
   function showInput(event) {
-    setOutput(textInput.current.value);
+    setOutput(event.target.value);
   }
 
   return (
@@ -42,7 +41,6 @@ export default function Search() {
         placeholder="Try “Miami”"
         onInput={showInput}
         value={output}
-        ref={textInput}
       />
     </Wrapper>
   );
