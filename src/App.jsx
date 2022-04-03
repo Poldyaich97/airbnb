@@ -29,7 +29,7 @@ const StyledStub = styled(Stub)`
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <React.Fragment>
         <StyledStub />
         <Wrapper>
