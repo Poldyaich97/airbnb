@@ -3,9 +3,14 @@ import { StyledTitle } from "../SectionTitle/SectionTitle";
 import SeeAll from "../SectionSee/SectionSee.jsx";
 import HomesCards from "./HomesCards";
 import React, { useState, useEffect } from "react";
+import getCardsNumber from "../getCards";
+
 const Columns = styled.div`
   display: flex;
   column-gap: 18px;
+  @media (max-width: 1024px) {
+    column-gap: 16px;
+  }
 `;
 const HeaderTitle = styled.div`
   display: flex;
@@ -16,12 +21,19 @@ const HeaderTitle = styled.div`
 `;
 
 export default function Homes(props) {
-  const [resultat, setResultat] = useState([]);
+  const [result, setResult] = useState([]);
+  const [cardNumber, setCardNumber] = useState(getCardsNumber([3, 3, 2]));
+
   useEffect(() => {
-    const API = "https://ipwbxlctkx.api.quickmocker.com/homes";
+    window.addEventListener("resize", () => {
+      setCardNumber(getCardsNumber([3, 3, 2]));
+    });
+    const API = "https://lzu9fc6y5h.api.quickmocker.com/homes";
     fetch(API)
       .then((res) => res.json())
-      .then((data) => setResultat(data));
+      .then((data) => {
+        setResult(data);
+      });
   }, []);
 
   return (
@@ -31,15 +43,16 @@ export default function Homes(props) {
         <SeeAll />
       </HeaderTitle>
       <Columns>
-        {resultat.slice(0, 3).map((element, pos) => (
-          <HomesCards
-            scr={element.imageSource}
-            price={element.price}
-            houseType={element.houseType}
-            bedsCount={element.bedsCount}
-            title={element.title}
-            key={pos}
-          />
+        {result.slice(0, cardNumber).map((element, pos) => (
+          <div key={pos}>
+            <HomesCards
+              scr={element.imageSource}
+              price={element.price}
+              houseType={element.houseType}
+              bedsCount={element.bedsCount}
+              title={element.title}
+            />
+          </div>
         ))}
       </Columns>
     </div>

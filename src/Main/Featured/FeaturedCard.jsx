@@ -4,9 +4,17 @@ import React from "react";
 const WrapperImage = styled.div`
   height: 220px;
   margin-bottom: 8px;
+  @media (max-width: 1024px) {
+    width: 176px;
+    height: 264px;
+  }
+  @media (max-width: 750px) {
+    width: 91px;
+    height: 138px;
+  }
 `;
 const StyledImage = styled.img`
-  object-fit: contain;
+  object-fit: cover;
   width: 100%;
   height: 100%;
   display: block;

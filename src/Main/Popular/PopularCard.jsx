@@ -1,15 +1,23 @@
 import styled from "styled-components";
 import React from "react";
-const Wrapper = styled.div`
-  //   width: 223px;
-`;
+
 const HeaderColumn = styled.div`
   margin-bottom: 12px;
+  height: 164px;
+  width: 229px;
+  @media (max-width: 1024px) {
+    width: 240px;
+  }
+  @media (max-width: 750px) {
+    width: 144px;
+    height: 108px;
+  }
 `;
+
 const StyledImage = styled.img`
-  object-fit: contain;
+  object-fit: cover;
   width: 100%;
-  height: 160px;
+  height: 100%;
   display: block;
 `;
 const PriceTitle = styled.div`
@@ -38,7 +46,7 @@ const NameSubtitle = styled.p`
 export default function PopularCard(props) {
   return (
     <React.Fragment>
-      <Wrapper>
+      <div>
         <HeaderColumn>
           <StyledImage src={props.scr} alt="imgOne" />
         </HeaderColumn>
@@ -47,7 +55,7 @@ export default function PopularCard(props) {
           <NameTitle>{props.title}</NameTitle>
           <NameSubtitle>About ${props.price} per person</NameSubtitle>
         </PriceTitle>
-      </Wrapper>
+      </div>
     </React.Fragment>
   );
 }

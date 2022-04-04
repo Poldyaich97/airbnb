@@ -4,6 +4,10 @@ import React from "react";
 const WrapperRaiting = styled.div`
   display: flex;
   column-gap: 8px;
+  @media (max-width: 700px) {
+    font-size: 12px;
+    line-height: 14px;
+  }
 `;
 const RaitingLine = styled.div`
   display: flex;
@@ -13,12 +17,25 @@ const RaitingLine = styled.div`
 const StarImage = styled.img`
   width: 12px;
   height: 12px;
+  @media (max-width: 1024px) {
+    width: 9px;
+    height: 9px;
+  }
+
+  @media (max-width: 750px) {
+    width: 7px;
+    height: 7px;
+  }
 `;
 const ReviewsLine = styled.p`
   margin: 0;
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
+  @media (max-width: 700px) {
+    font-size: 12px;
+    line-height: 14px;
+  }
 `;
 export default function RatingSuperhost(props) {
   return (

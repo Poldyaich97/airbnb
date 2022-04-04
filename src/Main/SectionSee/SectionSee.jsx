@@ -11,6 +11,9 @@ const StyledLink = styled(Link)`
   line-height: 24px;
   width: 56px;
   text-align: right;
+  @media (max-width: 700px) {
+    width: 72px;
+  }
 
   &::before {
     content: url(${Arrow});

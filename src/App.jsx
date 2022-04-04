@@ -1,5 +1,3 @@
-import styled from "styled-components";
-import Stub from "./mobilStub/Stub";
 import Main from "./Main/Main";
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
@@ -15,24 +13,11 @@ import PageNotFound from "./PageNotFound";
 import LogIn from "./Login";
 import SignIn from "./SignIn";
 
-const Wrapper = styled.div`
-  @media (max-width: 480px) {
-    display: none;
-  }
-`;
-
-const StyledStub = styled(Stub)`
-  @media (min-width: 480px) {
-    display: none;
-  } ;
-`;
-
 function App() {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <React.Fragment>
-        <StyledStub />
-        <Wrapper>
+        <div>
           <Routes>
             <Route path="/" element={<Root />}>
               <Route index element={<Main />} />
@@ -49,7 +34,7 @@ function App() {
               <Route path="*" element={<PageNotFound />} />
             </Route>
           </Routes>
-        </Wrapper>
+        </div>
       </React.Fragment>
     </BrowserRouter>
   );

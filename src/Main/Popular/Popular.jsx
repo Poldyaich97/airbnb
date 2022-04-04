@@ -3,23 +3,31 @@ import { StyledTitle } from "../SectionTitle/SectionTitle";
 import SeeAll from "../SectionSee/SectionSee.jsx";
 import React, { useState, useEffect } from "react";
 import PopularCard from "./PopularCard";
+import getCardsNumber from "../getCards";
 
 const Columns = styled.div`
   display: flex;
-  column-gap: 22px;
-  overflow: hidden;
-  padding: 24px 0px 64px 0px;
+  column-gap: 18px;
+  @media (max-width: 1024px) {
+    column-gap: 16px;
+  }
 `;
 const HeaderTitle = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 24px;
 `;
 
 export default function Popular() {
-  const [resultat, setResultat] = useState([]);
+  const [result, setResultat] = useState([]);
+  const [cardNumber, setCardNumber] = useState(getCardsNumber([4, 3, 2]));
+
   useEffect(() => {
-    const API = "https://ipwbxlctkx.api.quickmocker.com/reservations";
+    window.addEventListener("resize", () => {
+      setCardNumber(getCardsNumber([4, 3, 2]));
+    });
+    const API = "https://lzu9fc6y5h.api.quickmocker.com/reservation";
     fetch(API)
       .then((res) => res.json())
       .then((data) => setResultat(data));
@@ -32,7 +40,7 @@ export default function Popular() {
         <SeeAll />
       </HeaderTitle>
       <Columns>
-        {resultat.slice(0, 4).map((element, pos) => (
+        {result.slice(0, cardNumber).map((element, pos) => (
           <div key={pos}>
             <PopularCard
               scr={element.imageSouce}

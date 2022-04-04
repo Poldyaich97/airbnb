@@ -15,9 +15,15 @@ const Content = styled.div`
 `;
 const StyledNav = styled(Nav)`
   margin-left: auto;
+  @media (max-width: 750px) {
+    display: none;
+  }
 `;
 const Logo = styled.div`
   margin-right: 50px;
+  @media (max-width: 750px) {
+    margin-right: 24px;
+  }
 `;
 const StyledImg = styled.img`
   width: 30px;
