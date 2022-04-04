@@ -31,7 +31,7 @@ function App() {
               <Route path="cards" element={<Cards />}>
                 <Route path=":Id" element={<Card />} />
               </Route>
-              <Route path="*" element={<PageNotFound />} />
+              <Route path="/*" element={<PageNotFound />} />
             </Route>
           </Routes>
         </div>
