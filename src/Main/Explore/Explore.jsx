@@ -22,7 +22,7 @@ export default function Explore(props) {
     window.addEventListener("resize", () => {
       setCardNumber(getCardsNumber([3, 3, 2]));
     });
-    const API = "https://ipwbxlctkx.api.quickmocker.com/Explore";
+    const API = "https://lzu9fc6y5h.api.quickmocker.com/explore";
     fetch(API)
       .then((res) => res.json())
       .then((data) => setResult(data));

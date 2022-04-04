@@ -15,7 +15,7 @@ import SignIn from "./SignIn";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <React.Fragment>
         <div>
           <Routes>
@@ -31,7 +31,7 @@ function App() {
               <Route path="cards" element={<Cards />}>
                 <Route path=":Id" element={<Card />} />
               </Route>
-              <Route path="/*" element={<PageNotFound />} />
+              <Route path="*" element={<PageNotFound />} />
             </Route>
           </Routes>
         </div>

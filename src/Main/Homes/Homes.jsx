@@ -28,7 +28,7 @@ export default function Homes(props) {
     window.addEventListener("resize", () => {
       setCardNumber(getCardsNumber([3, 3, 2]));
     });
-    const API = "https://ipwbxlctkx.api.quickmocker.com/homes";
+    const API = "https://lzu9fc6y5h.api.quickmocker.com/homes";
     fetch(API)
       .then((res) => res.json())
       .then((data) => {

@@ -26,7 +26,7 @@ export default function Experiences(props) {
     window.addEventListener("resize", () => {
       setCardNumber(getCardsNumber([4, 3, 2]));
     });
-    const API = "https://ipwbxlctkx.api.quickmocker.com/experiences";
+    const API = "https://lzu9fc6y5h.api.quickmocker.com/experiences";
     fetch(API)
       .then((res) => res.json())
       .then((data) => setResult(data));

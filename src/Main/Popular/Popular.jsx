@@ -27,7 +27,7 @@ export default function Popular() {
     window.addEventListener("resize", () => {
       setCardNumber(getCardsNumber([4, 3, 2]));
     });
-    const API = "https://ipwbxlctkx.api.quickmocker.com/reservations";
+    const API = "https://lzu9fc6y5h.api.quickmocker.com/reservation";
     fetch(API)
       .then((res) => res.json())
       .then((data) => setResultat(data));
