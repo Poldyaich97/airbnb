@@ -84,7 +84,6 @@ export default function HomesCards(props, data) {
       </PriceTitle>
       <FooterColumn>
         <Raiting />
-        {/* тут вопрос. записал в todo  */}
       </FooterColumn>
     </div>
   );
